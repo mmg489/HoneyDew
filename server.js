@@ -18,6 +18,9 @@ app.use(express.json());
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+// connects css
+app.use(express.static(__dirname + '/public')); 
+
 // imports 'controller' file as router
 var routes = require('./controllers/honey_controller');
 
