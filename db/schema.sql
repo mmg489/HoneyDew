@@ -1,7 +1,6 @@
+DROP DATABASE IF EXISTS honeydew_db;
 CREATE DATABASE honeydew_db;
 USE honeydew_db;
-
--- TABLE1
 
 CREATE TABLE users (
     id int NOT NULL AUTO_INCREMENT,
@@ -12,20 +11,16 @@ CREATE TABLE users (
     PRIMARY KEY (id)
 );
 
--- TABLE2
-
 CREATE TABLE foods (
     id int NOT NULL AUTO_INCREMENT,
     meal_name VARCHAR(255) NOT NULL,
     swipe int NOT NULL DEFAULT 0,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 );
-
--- TABLE3
 
 CREATE TABLE activities (
     id int NOT NULL AUTO_INCREMENT,
     event_name VARCHAR(255) NOT NULL,
     swipe int NOT NULL DEFAULT 0,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 );
