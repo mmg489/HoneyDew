@@ -33,6 +33,11 @@ nav{
 #login{
     margin-top:5px;
 }
+#sign-up{
+   top: 15rem;
+    left: 24.5rem;
+    width: 50%;
+}
 .dropdown-trigger{
     margin-right: 30px;
     margin-top:5px;

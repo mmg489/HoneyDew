@@ -4,7 +4,53 @@
     <div class="row main-card" >
         <div class="col s12"></div>
     </div>
-    <div class="card large" id="card"></div>
+    <div class="card large" id="card">
+
+
+          <!-- Modal Trigger -->
+  <button data-target="sign-up" class="btn modal-trigger">Sign Up</button>
+  <!-- Modal Structure -->
+  <div id="sign-up" class="modal bottom-sheet">
+    <div class="modal-content">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+         <div class="input-field col s6">
+          <input couple-name placeholder="The HoneyDew Couple" id="couple-name" type="text" class="validate">
+          <label for="disabled">Couple Name</label>
+        </div> 
+         <div class="input-field col s6">
+          <input placeholder="HoneyDew" id="secret-word" type="text" class="validate">
+          <label for="first_name">Secret Word</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Blake Lively" id="user1" type="text" class="validate">
+          <label for="first_name">Your Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Ryan Reynolds"id="user2" type="text" class="validate">
+          <label for="last_name">Your Better Half</label>
+        </div>
+      <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
+
 </div>
+    </form>
+  </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>
+  </div>
+</div>
+          
 
 </main>
+
+<script>
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+          
+</script>
