@@ -1,21 +1,22 @@
-<main>
-     <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
-</ul>
 <nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">HoneyDew</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a id="login" href="sass.html">LOG IN</a></li>
+    <div class="nav-wrapper">
+        <a class="brand-logo">HoneyDew</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a id="login" href="/views/login.handlebars">LOG IN</a></li>
 
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="large material-icons">insert_menu</i></a></li>
-    </ul>
-  </div>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown4"><i class="large material-icons">insert_menu</i></a></li>
+
+            <!-- Dropdown Structure -->
+            <ul id="dropdown4" class="dropdown-content">
+                <li><a href="/views/dashboard.handlebars">Home</a></li>
+                <li><a href="/views/swipe.handlebars">Dinner or Activities?</a></li>
+                <li><a href="/views/table.handlebars">Things we Should</a></li>
+                <li class="divider"></li>
+                <li><a href="/views/login.handlebars">Sign Out</a></li>
+            </ul>
+        </ul>
+    </div>
 </nav>
 <div class="container">
     <div class="row">
@@ -23,11 +24,7 @@
     </div>
     <div class="card large" id="card"></div>
 </div>
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-        </div>
-    </div>
-</footer>
 
-</main>
+<script>
+    $('.dropdown-trigger').dropdown();
+</script>

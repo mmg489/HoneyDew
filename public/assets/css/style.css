@@ -2,13 +2,21 @@
 This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: http://www.fonts.com
 */
 @font-face{
-    font-family:"Honey Dew W05 Regular";
-    src:url("Fonts/5371840/ed6ad466-19b6-4aa2-81b6-5de7d3356417.eot?#iefix");
-    src:url("Fonts/5371840/ed6ad466-19b6-4aa2-81b6-5de7d3356417.eot?#iefix") format("eot"),url("Fonts/5371840/36c5ef68-d1de-4f9f-96d1-02df2727c99e.woff2") format("woff2"),url("Fonts/5371840/31dc1a97-a5d9-4eb4-bd85-7fe9813848bc.woff") format("woff"),url("Fonts/5371840/f672c4ae-5797-4d1d-9259-de38cfa5ab7c.ttf") format("truetype");
+    
+    font-family:"Honey Dew";
+    src:url("../Fonts/HoneyDew.eot") format("eot"),
+        url("../Fonts/HoneyDew.woff") format("woff"),
+        url("../Fonts/HoneyDew.woff2") format("woff2"),
+        url("../Fonts/HoneyDew.ttf") format("ttf");
 }
 body{
+    font-family: "Honey Dew", serif;
     background-image:url("https://cdn.pixabay.com/photo/2017/09/06/13/21/motion-2721439_960_720.jpg");
    
+}
+
+a {
+    font-family: "Honey Dew", serif;
 }
 footer{
     padding: 10px 0;
@@ -35,4 +43,11 @@ nav{
 }
 footer.page-footer{
     background-color: rgb(157, 226, 156);
+}
+
+
+.dropdown-content {
+    position: relative;
+    right: 0px !important;
+    top: -5px !important;
 }
