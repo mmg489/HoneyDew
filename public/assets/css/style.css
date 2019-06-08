@@ -40,6 +40,7 @@ nav{
 #card{
     margin: 75px 0px;
     background-color: rgba(237, 243, 237, 0.95);
+
 }
 footer.page-footer{
     background-color: rgb(157, 226, 156);
@@ -50,4 +51,9 @@ footer.page-footer{
     position: relative;
     right: 0px !important;
     top: -5px !important;
+    background-color: rgb(237, 243, 237);
+}
+
+.main-card{
+    position:absolute
 }
