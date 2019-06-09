@@ -37,7 +37,11 @@ nav{
    top: 15rem;
     left: 24.5rem;
     width: 50%;
+    font-size: x-large;
+    font-weight: bolder;
+    background-color:paleturquoise;
 }
+
 .dropdown-trigger{
     margin-right: 30px;
     margin-top:5px;
