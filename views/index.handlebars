@@ -16,7 +16,7 @@
     <form class="col s12">
       <div class="row">
          <div class="input-field col s6">
-          <input couple-name placeholder="The HoneyDew Couple" id="couple-name" type="text" class="validate">
+          <input placeholder="The HoneyDew Couple" id="couple-name" type="text" class="validate">
           <label for="couple-name">Couple Name</label>
         </div> 
          <div class="input-field col s6">
@@ -31,24 +31,19 @@
           <input placeholder="Ryan Reynolds"id="user2" type="text" class="validate">
           <label for="last_name">Your Better Half</label>
         </div>
-      <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
-
+      <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
 </div>
     </form>
   </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+      <a href="#!" class="modal-close waves-effect waves-purple btn-flat">Cancel</a>
     </div>
   </div>
-  
-
-    
-
-             <!-- Modal Trigger -->
-  <button data-target="login" class="btn modal-trigger">Log In</button>
-  <!-- Modal Structure -->
-  <div id="login" class="modal bottom-sheet">
+            <!-- Modal Trigger -->
+  <button data-target="log-in" class="btn modal-trigger">Log In</button>
+   <!-- Modal Structure -->
+  <div id="sign-up" class="modal bottom-sheet">
     <div class="modal-content">
   <div class="row">
     <form class="col s12">
@@ -80,6 +75,9 @@
 <script>
 
   $(document).ready(function(){
+    $('.modal').modal();
+  });
+   $(document).ready(function(){
     $('.modal').modal();
   });
           
