@@ -15,6 +15,14 @@ router.get('/dashboard', function (req, res) {
     res.render('dashboard');
 });
 
+router.get('/login', function (req, res) {
+    res.render('login');
+});
+
+router.get('/table', function (req, res) {
+    res.render('table');
+});
+
 router.get('/api/like/foods', function (req, res) {
     foods.all(function(data) {
         res.render('swipe', {foods_data: data})
