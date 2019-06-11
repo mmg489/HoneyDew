@@ -5,6 +5,7 @@ var router = express.Router();
 // imports foods and activities objects with methods
 var foods = require('../models/foods.js');
 var activities = require('../models/activities.js');
+var users= require('../models/users.js');
 
 // basic homepage route
 router.get('/', function (req, res) {
@@ -16,7 +17,9 @@ router.get('/dashboard', function (req, res) {
 });
 
 router.get('/login', function (req, res) {
-    res.render('login');
+    users.all(function(data){
+        res.render('login', {users_data: data})
+    })
 });
 
 router.get('/table', function (req, res) {
@@ -34,6 +37,7 @@ router.get('/api/like/activities', function (req, res) {
         res.render('swipe', {activites_data: data})
     })
 });
+
 
 router.post('/api/add')
 
