@@ -40,35 +40,37 @@
       <a href="#!" class="modal-close waves-effect waves-purple btn-flat">Cancel</a>
     </div>
   </div>
-            <!-- Modal Trigger -->
-  <button data-target="log-in" class="btn modal-trigger">Log In</button>
-   <!-- Modal Structure -->
-  <div id="sign-up" class="modal bottom-sheet">
+ <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
     <div class="modal-content">
-  <div class="row">
+       <div class="row">
     <form class="col s12">
+        <br>
       <div class="row">
-         <div class="input-field col s6">
-          <input couple-name placeholder="The HoneyDew Couple" id="couple-name" type="text" class="validate">
-          <label for="disabled">Couple Name</label>
-        </div> 
-         <div class="input-field col s6">
-          <input placeholder="HoneyDew" id="secret-word" type="text" class="validate">
-          <label for="first_name">Secret Word</label>
+        <div class="input-field col s6">
+          <input placeholder="The HoneyDew Couple" id="couple-name" type="text" class="validate">
+          <label for="first_name">Couple Name</label>
         </div>
-      <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</button>
-</div>
-    </form>
+        <div class="input-field col s6">
+         <input placeholder="HoneyDew" id="secret-word" type="text" class="validate">
+          <label for="last_name">Secret Word</label>
+        </div>
+           <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
+      </div>
+      </div>
+    </form> <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
   </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-    </div>
-  </div>
-  </div>
+
+
 </div>     
 </div>
-</div>
+
 
 </main>
 
@@ -77,8 +79,6 @@
   $(document).ready(function(){
     $('.modal').modal();
   });
-   $(document).ready(function(){
-    $('.modal').modal();
-  });
+
           
 </script>
