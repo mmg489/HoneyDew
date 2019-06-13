@@ -39,6 +39,21 @@ router.get('/api/like/activities', function (req, res) {
 });
 
 
+router.post('/api/users/register', function (req, res) {
+    newUser = {
+        "acct_name": req.body.acct_name.split(' ').join('_'),
+        "couple_name": req.body.acct_name,
+        "secret_word": req.body.secret_word,
+        "userone_name": req.body.userone_name,
+        "usertwo_name": req.body.usertwo_name
+    };
+    users.new(function (result) {
+        console.log(result);
+        res.sendStatus(200);
+    })
+});
+
+
 router.post('/api/add')
 
 // exports express router
