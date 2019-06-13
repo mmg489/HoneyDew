@@ -59,6 +59,22 @@ var orm = {
         });
     },
 
+    createUser: function(table,object,cb) {
+        var queryString = "INSERT INTO " + table;
+
+        queryString += " SET ?";
+       
+
+        console.log(queryString);
+
+        connection.query(queryString, object, function(err, result) {
+            if (err) {
+                throw err;
+            }
+             cb(result);
+        });
+    },
+
     // updates/changes a value for an item in the table
     update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;

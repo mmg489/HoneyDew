@@ -5,6 +5,7 @@ USE honeydew_db;
 CREATE TABLE users (
     id int NOT NULL AUTO_INCREMENT,
     acct_name VARCHAR(255) NOT NULL,
+    couple_name VARCHAR(255) NOT NULL,
     secret_word VARCHAR(255) NOT NULL,
     userone_name VARCHAR(255) NOT NULL,
     usertwo_name VARCHAR(255) NOT NULL,
