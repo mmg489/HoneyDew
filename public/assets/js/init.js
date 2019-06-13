@@ -5,6 +5,8 @@ $(document).ready(function (){
 
     $('.sidenav').sidenav();
 
+    $('.dropdown-trigger').dropdown();
+
     var mySwiper = new Swiper('.swiper-container');
 
     
@@ -15,7 +17,7 @@ $(document).ready(function (){
             var food_id = $(this).attr('value');
 
             $.ajax({
-                method: "PUT"
+                method: "PUT",
                 url: "/api/foods/undo/" + food_id
             }).then(function (data) {
                 console.log(food_id + ' unliked');

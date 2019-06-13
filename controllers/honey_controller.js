@@ -5,7 +5,7 @@ var router = express.Router();
 // imports foods and activities objects with methods
 var foods = require('../models/foods.js');
 var activities = require('../models/activities.js');
-var users= require('../models/users.js');
+var users = require('../models/users.js');
 
 // basic homepage route
 router.get('/', function (req, res) {
@@ -18,7 +18,7 @@ router.get('/dashboard', function (req, res) {
 });
 
 // the swiping page for shared 'liked' 
-router.get('/both', function (req,res) {
+router.get('/both', function (req, res) {
     res.render('both');
 });
 
@@ -28,8 +28,8 @@ router.get('/both', function (req,res) {
 
 // inital swiping and likeing 
 router.get('/api/foods/like', function (req, res) {
-    foods.all(function(data) {
-        res.render('swipe-foods', {foods_data: data});
+    foods.all(function (data) {
+        res.render('swipe-foods', { foods_data: data });
         console.log(data);
     })
 });
@@ -41,7 +41,7 @@ router.post('api/foods/add', function (req, res) {
 
 //updates the 'liked' count for foods
 router.put('/api/foods/liked/:id', function (req, res) {
-    foods.update(req.params.id, function(result) {
+    foods.update(req.params.id, function (result) {
         console.log(result);
         res.sendStatus(200);
     });
@@ -58,7 +58,7 @@ router.put('/api/foods/undo/:id', function (req, res) {
 // shows 'liked' food ideas from both users
 router.get('/api/foods/both', function (req, res) {
     foods.both(function (data) {
-        res.render('both-foods', {foods_data: data })
+        res.render('both-foods', { foods_data: data })
     })
 });
 
@@ -68,8 +68,8 @@ router.get('/api/foods/both', function (req, res) {
 
 // the initial swiping and liking
 router.get('/api/activities/like', function (req, res) {
-    activities.all(function(data) {
-        res.render('swipe-activities', {activites_data: data })
+    activities.all(function (data) {
+        res.render('swipe-activities', { activites_data: data })
     })
 });
 
