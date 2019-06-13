@@ -44,7 +44,7 @@ $(document).ready(function (){
             $(this).toggleClass('liked unliked');
 
             $('.liked').css({
-                "background-image": "url('../assets/images/heart.png')",
+                "background-image": "url('../../assets/images/heart.png')",
                 "background-size": "30%"
             });
         }
