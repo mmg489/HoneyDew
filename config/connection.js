@@ -16,7 +16,6 @@ else {
     password: process.env.DB_PASS,
     database: 'honeydew_db'
 })
-
 };
 connection.connect(function (err) {
     if (err) throw err;
