@@ -9,8 +9,11 @@
       <div class="statement"><p>Here to make those though everyday decisions <br> with your partner easier !</p></div>
           <!-- Modal Trigger -->
   <button data-target="sign-up" class="btn modal-trigger">Sign Up</button>
+  <div class="or"><p>or</p></div>
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+
   <!-- Modal Structure -->
-  <div id="sign-up" class="modal bottom-sheet">
+  <div id="sign-up" class="modal">
     <div class="modal-content">
   <div class="row">
     <form class="col s12" type="text" id="newuser" action="api/users/register" method="POST">
@@ -41,10 +44,9 @@
     </div>
   </div>
 
-  <div class="or"><p>or</p></div>
+  
  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
-
+  
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
@@ -75,3 +77,12 @@
 
 
 </main>
+
+<script>
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+          
+</script>
