@@ -1,0 +1,113 @@
+/*
+This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: http://www.fonts.com
+*/
+
+@font-face {
+    font-family: "Honey Dew";
+    src: url("../Fonts/HoneyDew.eot") format("eot"), url("../Fonts/HoneyDew.woff") format("woff"), url("../Fonts/HoneyDew.woff2") format("woff2"), url("../Fonts/HoneyDew.ttf") format("ttf");
+}
+
+body {
+    font-family: "Honey Dew", serif;
+    background-image: url("../images/engagement-1718244_1920.jpeg");
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+  main {
+    flex: 1 0 auto;
+  }
+     
+
+p {
+    color: black;
+    margin: 10px;
+}
+
+a {
+    font-family: "Honey Dew", serif;
+}
+
+h5 {
+    color: #F2BF27 !important;
+}
+
+.statement, .or {
+    font-size: 25px;
+    color: black;
+}
+
+footer.yellow.lighten-3 {
+    padding: 10px 0;
+    background-color: rgb(134, 246, 160) !important;
+    color: #F2BF27 !important;
+}
+
+nav {
+    background-color: rgb(134, 246, 160);
+}
+
+.btn, .btn-large {
+    background-color: #F2BF27 !important;
+}
+
+.brand-logo {
+    margin-left: 30px;
+    margin-top: 5px;
+    color: #F2BF27 !important;
+}
+
+#login {
+    margin-top: 5px;
+}
+
+#sign-up {
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: paleturquoise;
+}
+
+.dropdown-trigger {
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
+#card {
+    margin: 75px 0px;
+    background-color: rgba(242, 240, 206, 0);
+}
+
+footer.page-footer {
+    background-color: rgb(146, 231, 145);
+}
+
+nav ul a {
+    color: black !important;
+}
+
+.dropdown-content {
+    position: relative;
+    right: 0px !important;
+    top: -5px !important;
+    background-color: white;
+}
+
+.main-card {
+    position: absolute
+}
+
+.dashboard-cont {
+    width:100%;
+    margin-left: 0px;
+}
+
+.idea {
+    text-align: center;
+    margin-top: 30%;
+    color: #ffc400;
+    font-size: 5em;
+    -webkit-text-stroke: 1px #242424;
+    text-shadow: 0px 0px 14px rgb(133, 143, 0);
+}

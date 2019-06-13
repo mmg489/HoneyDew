@@ -1,0 +1,28 @@
+{
+  "name": "honeydew",
+  "version": "1.0.0",
+  "description": "Couple's swipe app for meal/date ideas",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmg489/HoneyDew.git"
+  },
+  "author": "Tanya Gaviria, Margarita Munoz, Anastasia Upreti, Gabriella Tannous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmg489/HoneyDew/issues"
+  },
+  "homepage": "https://github.com/mmg489/HoneyDew#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1",
+    "swiper": "^4.5.0"
+  }
+}
