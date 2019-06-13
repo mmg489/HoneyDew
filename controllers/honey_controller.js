@@ -15,19 +15,25 @@ router.get('/dashboard', function (req, res) {
     res.render('dashboard');
 });
 
-router.get('/api/like/foods', function (req, res) {
-    foods.all(function(data) {
-        res.render('swipe', {foods_data: data})
+router.get('/both', function (req, res) {
+    res.render('both');
+});
+
+router.get('/api/foods/like', function (req, res) {
+    foods.all(function (data) {
+        res.render('swipe', { foods_data: data })
     })
 });
 
-router.get('/api/like/activities', function (req, res) {
-    activities.all(function(data) {
-        res.render('swipe', {activites_data: data})
+router.get('/api/activities/like', function (req, res) {
+    activities.all(function (data) {
+        res.render('swipe', { activites_data: data })
     })
 });
 
-router.post('/api/add')
+router.post('/api/foods/add', function (req, res) {
+    foods.create('')
+})
 
 // exports express router
 module.exports = router;
