@@ -1,12 +1,10 @@
 var orm = require("../config/orm.js");
+//var express = require('express');
+//var router = express.Router();
 
 var users = {
-    CreateNewUser: function (cols, vals, cb){
-        orm.CreateNewUser('users', 'acct_name', 'secret_word','userone_name','usertwo_name', cols,vals, function(res){
-            
-            cb(res);
-
-        });
+    new:function(cb) {
+        orm.createUser('users', newUser , cb );
     }
 }
 

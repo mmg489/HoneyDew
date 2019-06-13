@@ -13,25 +13,25 @@
   <div id="sign-up" class="modal bottom-sheet">
     <div class="modal-content">
   <div class="row">
-    <form class="col s12" type="text" action="/users" method="POST">
+    <form class="col s12" type="text" id="newuser" action="api/users/register" method="POST">
       <div class="row">
          <div class="input-field col s6">
-          <input placeholder="The HoneyDew Couple" id="user" name="acct_name" type="text" class="validate">
+          <input placeholder="The HoneyDew Couple" name="acct_name" type="text" class="validate">
           <label for="couple-name">Couple Name</label>
         </div> 
          <div class="input-field col s6">
-          <input placeholder="HoneyDew" id="user" name="secret_word" type="text" class="validate">
+          <input placeholder="HoneyDew"  name="secret_word" type="text" class="validate">
           <label for="first_name">Secret Word</label>
         </div>
         <div class="input-field col s6">
-          <input placeholder="Blake Lively" id="user" name="userone_name" type="text" class="validate">
+          <input placeholder="Blake Lively" name="userone_name" type="text" class="validate">
           <label for="first_name">Your Name</label>
         </div>
         <div class="input-field col s6">
-          <input placeholder="Ryan Reynolds" id="user" name="usertwo_name" type="text" class="validate">
+          <input placeholder="Ryan Reynolds"  name="usertwo_name" type="text" class="validate">
           <label for="last_name">Your Better Half</label>
         </div>
-      <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
+      <button type="submit" form="newuser" class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
 </div>
     </form>
   </div>
