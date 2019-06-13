@@ -97,3 +97,17 @@ nav ul a {
 .main-card {
     position: absolute
 }
+
+.dashboard-cont {
+    width:100%;
+    margin-left: 0px;
+}
+
+.idea {
+    text-align: center;
+    margin-top: 30%;
+    color: #ffc400;
+    font-size: 5em;
+    -webkit-text-stroke: 1px #242424;
+    text-shadow: 0px 0px 14px rgb(133, 143, 0);
+}
