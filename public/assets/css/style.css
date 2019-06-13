@@ -11,24 +11,42 @@ This CSS resource incorporates links to font software which is the valuable copy
 }
 body{
     font-family: "Honey Dew", serif;
-    background-image:url("https://cdn.pixabay.com/photo/2017/09/06/13/21/motion-2721439_960_720.jpg");
+  
+  background-image:url("../images/engagement-1718244_1920.jpeg");
+  background-repeat: no-repeat;
    
 }
-
+p{
+    color:black;
+    margin:10px;
+}
 a {
     font-family: "Honey Dew", serif;
 }
-footer{
+h5{
+    color:#F2BF27 !important;
+}
+.statement, .or {
+    font-size: 25px;
+    color: black;
+}
+footer.yellow.lighten-3{
     padding: 10px 0;
-    
- 
+    background-color: rgb(134, 246, 160) !important;
+    color:#F2BF27 !important;
 }
 nav{
-    background-color:rgb(157, 226, 156);
+    background-color: rgb(134, 246, 160);
+
+
+}
+.btn, .btn-large{
+    background-color:#F2BF27 !important;
 }
 .brand-logo{
     margin-left: 30px;
     margin-top:5px;
+    color:#F2BF27 !important;
 }
 #login{
     margin-top:5px;
@@ -48,19 +66,23 @@ nav{
 }
 #card{
     margin: 75px 0px;
-    background-color: rgba(237, 243, 237, 0.95);
+    background-color: rgba(242, 240, 206, 0);
+
 
 }
 footer.page-footer{
-    background-color: rgb(157, 226, 156);
+    background-color: rgb(146, 231, 145);
 }
 
+nav ul a {
+    color:black !important;
+}
 
 .dropdown-content {
     position: relative;
     right: 0px !important;
     top: -5px !important;
-    background-color: rgb(237, 243, 237);
+    background-color: white;
 }
 
 .main-card{
