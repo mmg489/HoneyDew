@@ -15,6 +15,7 @@ CREATE TABLE users (
 CREATE TABLE foods (
     id int NOT NULL AUTO_INCREMENT,
     meal_name VARCHAR(255) NOT NULL,
+    meal_img VARCHAR (255) NOT NULL,
     swipe int NOT NULL DEFAULT 0,
     PRIMARY KEY (id)
 );
@@ -22,6 +23,7 @@ CREATE TABLE foods (
 CREATE TABLE activities (
     id int NOT NULL AUTO_INCREMENT,
     event_name VARCHAR(255) NOT NULL,
+    event_img VARCHAR (255) NOT NULL,
     swipe int NOT NULL DEFAULT 0,
     PRIMARY KEY (id)
 );

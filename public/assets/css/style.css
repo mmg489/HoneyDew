@@ -41,12 +41,13 @@ h5 {
 
 footer.yellow.lighten-3 {
     padding: 10px 0;
-    background-color: rgb(134, 246, 160) !important;
+    background-color: rgb(208,233,129) !important;
     color: #F2BF27 !important;
 }
 
 nav {
-    background-color: rgb(134, 246, 160);
+    background-color: rgb(208,233,129);
+    
 }
 
 .btn, .btn-large {
