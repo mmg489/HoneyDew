@@ -1,88 +1,86 @@
 <main>
 
-<div class="container">
-    <div class="row main-card" >
-        <div class="col s12"></div>
+  <div class="container">
+    <div class="row main-card">
+      <div class="col s12"></div>
     </div>
-      
-      <img src="/assets/images/logo_transparent_background.png" width="380px">
-      <div class="statement"><p>Here to make those though everyday decisions <br> with your partner easier !</p></div>
-          <!-- Modal Trigger -->
-  <button data-target="sign-up" class="btn modal-trigger">Sign Up</button>
-  <div class="or"><p>or</p></div>
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
 
-  <!-- Modal Structure -->
-  <div id="sign-up" class="modal">
-    <div class="modal-content">
-  <div class="row">
-    <form class="col s12" type="text" id="newuser" action="api/users/register" method="POST">
-      <div class="row">
-         <div class="input-field col s6">
-          <input placeholder="The HoneyDew Couple" name="acct_name" type="text" class="validate">
-          <label for="couple-name">Couple Name</label>
-        </div> 
-         <div class="input-field col s6">
-          <input placeholder="HoneyDew"  name="secret_word" type="text" class="validate">
-          <label for="first_name">Secret Word</label>
-        </div>
-        <div class="input-field col s6">
-          <input placeholder="Blake Lively" name="userone_name" type="text" class="validate">
-          <label for="first_name">Your Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input placeholder="Ryan Reynolds"  name="usertwo_name" type="text" class="validate">
-          <label for="last_name">Your Better Half</label>
-        </div>
-      <button type="submit" form="newuser" class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
-</div>
-    </form>
-  </div>
+    <img src="/assets/images/logo_transparent_background.png" width="380px">
+    <div class="statement">
+      <p>Here to make those though everyday decisions <br> with your partner easier !</p>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-purple btn-flat">Cancel</a>
+    <!-- Modal Trigger -->
+    <button data-target="sign-up" class="btn modal-trigger">Sign Up</button>
+    <div class="or">
+      <p>or</p>
     </div>
-  </div>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
 
-  
- <!-- Modal Trigger -->
-  
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-       <div class="row">
-    <form class="col s12" id="login" action="auth" method="POST">
-        <br>
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="The HoneyDew Couple" id="user" name= "acct_name" type="text" class="validate">
-          <label for="first_name">Couple Name</label>
+    <!-- Modal Structure -->
+    <div id="sign-up" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <form class="col s12" type="text" id="newuser" action="api/users/register" method="POST">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="The HoneyDew Couple" name="acct_name" type="text" class="validate">
+                <label for="couple-name">Couple Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="HoneyDew" name="secret_word" type="text" class="validate">
+                <label for="first_name">Secret Word</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="Blake Lively" name="userone_name" type="text" class="validate">
+                <label for="first_name">Your Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="Ryan Reynolds" name="usertwo_name" type="text" class="validate">
+                <label for="last_name">Your Better Half</label>
+              </div>
+              <button type="submit" form="newuser"
+                class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
+            </div>
+          </form>
         </div>
-        <div class="input-field col s6">
-         <input placeholder="HoneyDew" id="user" name="secret-word" type="text" class="validate">
-          <label for="secret_word">Secret Word</label>
-        </div>
-           <button type="submit" form="login" class="modal-action modal-close waves-effect waves-purple btn-flat">Log In</button>
       </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-purple btn-flat">Cancel</a>
       </div>
-    </form> <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
     </div>
-  </div>
-    </div>
-<br><br>
 
-</div>     
-</div>
+
+    <!-- Modal Trigger -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <form class="col s12" id="login" action="auth" method="POST">
+            <br>
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="The HoneyDew Couple" id="user" name="acct_name" type="text" class="validate">
+                <label for="first_name">Couple Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="HoneyDew" id="user" name="secretword" type="text" class="validate">
+                <label for="secret_word">Secret Word</label>
+              </div>
+              <button type="submit" form="login" class="modal-action modal-close waves-effect waves-purple btn-flat">Log
+                In</button>
+            </div>
+        </div>
+        </form>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+  </div>
+  </div>
 
 
 </main>
-
-<script>
-
-  $(document).ready(function(){
-    $('.modal').modal();
-  });
-
-          
-</script>
