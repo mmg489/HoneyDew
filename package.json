@@ -4,7 +4,7 @@
   "description": "Couple's swipe app for meal/date ideas",
   "main": "server.js",
   "scripts": {
-    "test": "npm start test",
+    "test": "mocha",
     "start": "node server.js"
   },
   "repository": {
@@ -24,5 +24,12 @@
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
     "swiper": "^4.5.0"
+  },
+  "devDependencies": {
+
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+
+    "express-session": "^1.16.2"
   }
 }

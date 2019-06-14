@@ -1,170 +1,187 @@
-INSERT INTO activities (event_name) VALUES('Movie Night');
-INSERT INTO activities (event_name) VALUES('Netflix and Chill');
-INSERT INTO activities (event_name) VALUES('Gym Date');
-INSERT INTO activities (event_name) VALUES('Bonfire');
-INSERT INTO activities (event_name) VALUES('Hike/Park');
-INSERT INTO activities (event_name) VALUES('Concert');
-INSERT INTO activities (event_name) VALUES('Board Game Night');
-INSERT INTO activities (event_name) VALUES('Arcade/Gameing Night');
-INSERT INTO activities (event_name) VALUES( 'Shopping');
-INSERT INTO activities (event_name) VALUES( 'Bowling');
-INSERT INTO activities (event_name) VALUES( 'Taking a Scenic Drive');
-INSERT INTO activities (event_name) VALUES( 'Volunteer');
-INSERT INTO activities (event_name) VALUES( 'Take a Painting Class');
-INSERT INTO activities (event_name) VALUES( 'Take a Cooking Class');
-INSERT INTO activities (event_name) VALUES( 'Take a Foreign Language');
-INSERT INTO activities (event_name) VALUES( 'Take a Pottery Class');
-INSERT INTO activities (event_name) VALUES( 'Make Dinner Together');
-INSERT INTO activities (event_name) VALUES( 'Visit Family/Friends');
-INSERT INTO activities (event_name) VALUES( 'Attend a Sporting Event');
-INSERT INTO activities (event_name) VALUES( 'Ghost Tour');
-INSERT INTO activities (event_name) VALUES( 'Mini Golf');
-INSERT INTO activities (event_name) VALUES( 'Go to a Dive Bar');
-INSERT INTO activities (event_name) VALUES( 'Go to the Symphony');
-INSERT INTO activities (event_name) VALUES( 'Tubing on a River');
-INSERT INTO activities (event_name) VALUES( 'Going to a Neighborhood Festival');
-INSERT INTO activities (event_name) VALUES( 'Getting a Couples Massage');
-INSERT INTO activities (event_name) VALUES( 'Watch a Childhood Favorite Movie');
-INSERT INTO activities (event_name) VALUES( 'Build a Fort');
-INSERT INTO activities (event_name) VALUES( 'Go to a Local Fair');
-INSERT INTO activities (event_name) VALUES( 'Go to an Amusement Park');
-INSERT INTO activities (event_name) VALUES( 'Plant a Garden');
-INSERT INTO activities (event_name) VALUES( 'Binge Watch a TV Show');
-INSERT INTO activities (event_name) VALUES( 'Go Dancing');
-INSERT INTO activities (event_name) VALUES( 'Play Music Together');
-INSERT INTO activities (event_name) VALUES( 'Have a Cocktail Night');
-INSERT INTO activities (event_name) VALUES( 'Dress up and go for a Fancy Night Out');
-INSERT INTO activities (event_name) VALUES( 'Plan a Vacation');
-INSERT INTO activities (event_name) VALUES( 'Go Swimming');
-INSERT INTO activities (event_name) VALUES( 'Attend an Art Show');
-INSERT INTO activities (event_name) VALUES( 'Go to the Bookstore/Library');
+INSERT INTO activities
+    (event_name)
+VALUES
+    ('Movie Night'),
+    ('Netflix and Chill'),
+    ('Gym Date'),
+    ('Bonfire'),
+    ('Hike/Park'),
+    ('Concert'),
+    ('Board Game Night'),
+    ('Arcade/Gameing Night'),
+    ('Shopping'),
+    ('Bowling'),
+    ('Taking a Scenic Drive'),
+    ('Volunteer'),
+    ('Take a Painting Class'),
+    ('Take a Cooking Class'),
+    ('Take a Foreign Language'),
+    ('Take a Pottery Class'),
+    ('Make Dinner Together'),
+    ('Visit Family/Friends'),
+    ('Attend a Sporting Event'),
+    ('Ghost Tour'),
+    ('Mini Golf'),
+    ('Go to a Dive Bar'),
+    ('Go to the Symphony'),
+    ('Tubing on a River'),
+    ('Going to a Neighborhood Festival'),
+    ('Getting a Couples Massage'),
+    ('Watch a Childhood Favorite Movie'),
+    ('Build a Fort'),
+    ('Go to a Local Fair'),
+    ('Go to an Amusement Park'),
+    ('Plant a Garden'),
+    ('Binge Watch a TV Show'),
+    ('Go Dancing'),
+    ('Play Music Together'),
+    ('Have a Cocktail Night'),
+    ('Dress up and go for a Fancy Night Out'),
+    ('Plan a Vacation'),
+    ('Go Swimming'),
+    ('Attend an Art Show'),
+    ('Go to the Bookstore/Library');
 
 
-INSERT INTO foods (meal_name) VALUES('Hamburger');
-INSERT INTO foods (meal_name) VALUES('Turkey Burger');
-INSERT INTO foods (meal_name) VALUES('Chicken Sandwich');
-INSERT INTO foods (meal_name) VALUES('Chicken Strips');
-INSERT INTO foods (meal_name) VALUES('Hot Dog');
-INSERT INTO foods (meal_name) VALUES('Taco');
-INSERT INTO foods (meal_name) VALUES('Burrito');
-INSERT INTO foods (meal_name) VALUES('Beef Empanada');
-INSERT INTO foods (meal_name) VALUES('Chile Relleno');
-INSERT INTO foods (meal_name) VALUES('Chips and Salsa');
-INSERT INTO foods (meal_name) VALUES('Chicken Tikka Masala');
-INSERT INTO foods (meal_name) VALUES('Samosas');
-INSERT INTO foods (meal_name) VALUES('Butter Chicken');
-INSERT INTO foods (meal_name) VALUES('Chickpea Curry');
-INSERT INTO foods (meal_name) VALUES('Keema Aloo');
-INSERT INTO foods (meal_name) VALUES('Chicken Shawarma');
-INSERT INTO foods (meal_name) VALUES('Greek Chicken Souvlaki');
-INSERT INTO foods (meal_name) VALUES('Greek Roasted Potatoes');
-INSERT INTO foods (meal_name) VALUES('Greek Salad');
-INSERT INTO foods (meal_name) VALUES('Humus');
-INSERT INTO foods (meal_name) VALUES('Jerk Chicken');
-INSERT INTO foods (meal_name) VALUES('Ackee and Saltfish');
-INSERT INTO foods (meal_name) VALUES('Red Pea Soup');
-INSERT INTO foods (meal_name) VALUES('Brown Stew Chicken');
-INSERT INTO foods (meal_name) VALUES('Cornmeal Porridge');
-INSERT INTO foods (meal_name) VALUES('Shrimp Etouffee');
-INSERT INTO foods (meal_name) VALUES('Jambalaya');
-INSERT INTO foods (meal_name) VALUES('Gumbo');
-INSERT INTO foods (meal_name) VALUES('Shrimp and Grits');
-INSERT INTO foods (meal_name) VALUES('Blackened Catfish');
-INSERT INTO foods (meal_name) VALUES('Tortellini Soup');
-INSERT INTO foods (meal_name) VALUES('Baked Ziti with Sausage');
-INSERT INTO foods (meal_name) VALUES('Gnocchi with Tomato Sauce and Mozzarella');
-INSERT INTO foods (meal_name) VALUES('Baked Eggplant with Parmesan');
-INSERT INTO foods (meal_name) VALUES('Beefy Baked Ravioli');
-INSERT INTO foods (meal_name) VALUES('Funnel Cake');
-INSERT INTO foods (meal_name) VALUES('Beignets');
-INSERT INTO foods (meal_name) VALUES('Taco Bell');
-INSERT INTO foods (meal_name) VALUES('Homemade pizza');
-INSERT INTO foods (meal_name) VALUES('Hot wings');
-INSERT INTO foods (meal_name) VALUES('Lasagna');
-INSERT INTO foods (meal_name) VALUES('One of your favorite childhood meals');
+INSERT INTO foods
+    (meal_name)
+VALUES
+    ('Hamburger'),
+    ('Turkey Burger'),
+    ('Chicken Sandwich'),
+    ('Chicken Strips'),
+    ('Hot Dog'),
+    ('Taco'),
+    ('Burrito'),
+    ('Beef Empanada'),
+    ('Chile Relleno'),
+    ('Chips and Salsa'),
+    ('Chicken Tikka Masala'),
+    ('Samosas'),
+    ('Butter Chicken'),
+    ('Chickpea Curry'),
+    ('Keema Aloo'),
+    ('Chicken Shawarma'),
+    ('Greek Chicken Souvlaki'),
+    ('Greek Roasted Potatoes'),
+    ('Greek Salad'),
+    ('Humus'),
+    ('Jerk Chicken'),
+    ('Ackee and Saltfish'),
+    ('Red Pea Soup'),
+    ('Brown Stew Chicken'),
+    ('Cornmeal Porridge'),
+    ('Shrimp Etouffee'),
+    ('Jambalaya'),
+    ('Gumbo'),
+    ('Shrimp and Grits'),
+    ('Blackened Catfish'),
+    ('Tortellini Soup'),
+    ('Baked Ziti with Sausage'),
+    ('Gnocchi with Tomato Sauce and Mozzarella'),
+    ('Baked Eggplant with Parmesan'),
+    ('Beefy Baked Ravioli'),
+    ('Funnel Cake'),
+    ('Beignets'),
+    ('Taco Bell'),
+    ('Homemade pizza'),
+    ('Hot wings'),
+    ('Lasagna'),
+    ('One of your favorite childhood meals');
+
+INSERT INTO users
+    (acct_name, couple_name, secret_word, userone_name, usertwo_name)
+VALUES
+    ('test_couple', 'test couple', 'password', 'John', 'Jane'); 
 
 
 
-INSERT INTO activities (event_img) VALUES('Movie-Night');
-INSERT INTO activities (event_img) VALUES('Netflix-and-Chill');
-INSERT INTO activities (event_img) VALUES('Gym-Date');
-INSERT INTO activities (event_img) VALUES('Bonfire');
-INSERT INTO activities (event_img) VALUES('Hike-Park');
-INSERT INTO activities (event_img) VALUES('Concert');
-INSERT INTO activities (event_img) VALUES('Board-Game-Night');
-INSERT INTO activities (event_img) VALUES('Arcade-Gaming Night');
-INSERT INTO activities (event_img) VALUES( 'Shopping');
-INSERT INTO activities (event_img) VALUES( 'Bowling');
-INSERT INTO activities (event_img) VALUES( 'Taking-a-Scenic-Drive');
-INSERT INTO activities (event_img) VALUES( 'Volunteer');
-INSERT INTO activities (event_img) VALUES( 'Painting-Class');
-INSERT INTO activities (event_img) VALUES( 'Cooking-Class');
-INSERT INTO activities (event_img) VALUES( 'Foreign-Language');
-INSERT INTO activities (event_img) VALUES( 'Pottery-Class');
-INSERT INTO activities (event_img) VALUES( 'Make-Dinner-Together');
-INSERT INTO activities (event_img) VALUES( 'Visit-Family/Friends');
-INSERT INTO activities (event_img) VALUES( 'Attend-a-Sporting-Event');
-INSERT INTO activities (event_img) VALUES( 'Ghost-Tour');
-INSERT INTO activities (event_img) VALUES( 'Mini-Golf');
-INSERT INTO activities (event_img) VALUES( 'Dive-Bar');
-INSERT INTO activities (event_img) VALUES( 'Symphony');
-INSERT INTO activities (event_img) VALUES( 'Tubing-on-a-River');
-INSERT INTO activities (event_img) VALUES( 'Neighborhood-Festival');
-INSERT INTO activities (event_img) VALUES( 'Couples-Massage');
-INSERT INTO activities (event_img) VALUES( 'Watch-a-Childhood-Favorite-Movie');
-INSERT INTO activities (event_img) VALUES( 'Build-a-Fort');
-INSERT INTO activities (event_img) VALUES( 'Local-Fair');
-INSERT INTO activities (event_img) VALUES( 'Amusement-Park');
-INSERT INTO activities (event_img) VALUES( 'Plant-a-Garden');
-INSERT INTO activities (event_img) VALUES( 'Binge-Watch-a-TV-Show');
-INSERT INTO activities (event_img) VALUES( 'Go-Dancing');
-INSERT INTO activities (event_img) VALUES( 'Play-Music-Together');
-INSERT INTO activities (event_img) VALUES( 'Have-a-Cocktail-Night');
-INSERT INTO activities (event_img) VALUES( 'Fancy-Night-Out');
-INSERT INTO activities (event_img) VALUES( 'Plan-a-Vacation');
-INSERT INTO activities (event_img) VALUES( 'Go-Swimming');
-INSERT INTO activities (event_img) VALUES( 'Art-Show');
-INSERT INTO activities (event_img) VALUES( 'Bookstore-Library');
+INSERT INTO activities 
+(event_img) 
+VALUES
+('Movie-Night'),
+('Netflix-and-Chill'),
+('Gym-Date'),
+('Bonfire'),
+('Hike-Park'),
+('Concert'),
+('Board-Game-Night'),
+('Arcade-Gaming Night'),
+( 'Shopping'),
+( 'Bowling'),
+( 'Taking-a-Scenic-Drive'),
+( 'Volunteer'),
+( 'Painting-Class'),
+( 'Cooking-Class'),
+( 'Foreign-Language'),
+( 'Pottery-Class'),
+( 'Make-Dinner-Together'),
+( 'Visit-Family/Friends'),
+( 'Attend-a-Sporting-Event'),
+( 'Ghost-Tour'),
+( 'Mini-Golf'),
+( 'Dive-Bar'),
+( 'Symphony'),
+( 'Tubing-on-a-River'),
+( 'Neighborhood-Festival'),
+( 'Couples-Massage'),
+( 'Watch-a-Childhood-Favorite-Movie'),
+( 'Build-a-Fort'),
+( 'Local-Fair'),
+( 'Amusement-Park'),
+( 'Plant-a-Garden'),
+( 'Binge-Watch-a-TV-Show'),
+( 'Go-Dancing'),
+( 'Play-Music-Together'),
+( 'Have-a-Cocktail-Night'),
+( 'Fancy-Night-Out'),
+( 'Plan-a-Vacation'),
+( 'Go-Swimming'),
+( 'Art-Show'),
+( 'Bookstore-Library'),
 
-INSERT INTO foods (meal_img) VALUES('Hamburger');
-INSERT INTO foods (meal_img) VALUES('Turkey Burger');
-INSERT INTO foods (meal_img) VALUES('Chicken Sandwich');
-INSERT INTO foods (meal_img) VALUES('Chicken Strips');
-INSERT INTO foods (meal_img) VALUES('Hot Dog');
-INSERT INTO foods (meal_img) VALUES('Taco');
-INSERT INTO foods (meal_img) VALUES('Burrito');
-INSERT INTO foods (meal_img) VALUES('Beef Empanada');
-INSERT INTO foods (meal_img) VALUES('Chile Relleno');
-INSERT INTO foods (meal_img) VALUES('Chips and Salsa');
-INSERT INTO foods (meal_img) VALUES('Chicken Tikka Masala');
-INSERT INTO foods (meal_img) VALUES('Samosas');
-INSERT INTO foods (meal_img) VALUES('Butter Chicken');
-INSERT INTO foods (meal_img) VALUES('Chickpea Curry');
-INSERT INTO foods (meal_img) VALUES('Keema Aloo');
-INSERT INTO foods (meal_img) VALUES('Chicken Shawarma');
-INSERT INTO foods (meal_img) VALUES('Greek Chicken Souvlaki');
-INSERT INTO foods (meal_img) VALUES('Greek Roasted Potatoes');
-INSERT INTO foods (meal_img) VALUES('Greek Salad');
-INSERT INTO foods (meal_img) VALUES('Humus');
-INSERT INTO foods (meal_img) VALUES('Jerk Chicken');
-INSERT INTO foods (meal_img) VALUES('Ackee and Saltfish');
-INSERT INTO foods (meal_img) VALUES('Red Pea Soup');
-INSERT INTO foods (meal_img) VALUES('Brown Stew Chicken');
-INSERT INTO foods (meal_img) VALUES('Cornmeal Porridge');
-INSERT INTO foods (meal_img) VALUES('Shrimp Etouffee');
-INSERT INTO foods (meal_img) VALUES('Jambalaya');
-INSERT INTO foods (meal_img) VALUES('Gumbo');
-INSERT INTO foods (meal_img) VALUES('Shrimp and Grits');
-INSERT INTO foods (meal_img) VALUES('Blackened Catfish');
-INSERT INTO foods (meal_img) VALUES('Tortellini Soup');
-INSERT INTO foods (meal_img) VALUES('Baked Ziti with Sausage');
-INSERT INTO foods (meal_img) VALUES('Gnocchi with Tomato Sauce and Mozzarella');
-INSERT INTO foods (meal_img) VALUES('Baked Eggplant with Parmesan');
-INSERT INTO foods (meal_img) VALUES('Beefy Baked Ravioli');
-INSERT INTO foods (meal_img) VALUES('Funnel Cake');
-INSERT INTO foods (meal_img) VALUES('Beignets');
-INSERT INTO foods (meal_img) VALUES('Taco Bell');
-INSERT INTO foods (meal_img) VALUES('Homemade pizza');
-INSERT INTO foods (meal_img) VALUES('Hot wings');
-INSERT INTO foods (meal_img) VALUES('Lasagna');
-INSERT INTO foods (meal_img) VALUES('One of your favorite childhood meals');
+INSERT INTO foods 
+(meal_img) 
+VALUES
+('Hamburger'),
+('Turkey Burger'),
+('Chicken Sandwich'),
+('Chicken Strips'),
+('Hot Dog'),
+('Taco'),
+('Burrito'),
+('Beef Empanada'),
+('Chile Relleno'),
+('Chips and Salsa'),
+('Chicken Tikka Masala'),
+('Samosas'),
+('Butter Chicken'),
+('Chickpea Curry'),
+('Keema Aloo'),
+('Chicken Shawarma'),
+('Greek Chicken Souvlaki'),
+('Greek Roasted Potatoes'),
+('Greek Salad'),
+('Humus'),
+('Jerk Chicken'),
+('Ackee and Saltfish'),
+('Red Pea Soup'),
+('Brown Stew Chicken'),
+('Cornmeal Porridge'),
+('Shrimp Etouffee'),
+('Jambalaya'),
+('Gumbo'),
+('Shrimp and Grits'),
+('Blackened Catfish'),
+('Tortellini Soup'),
+('Baked Ziti with Sausage'),
+('Gnocchi with Tomato Sauce and Mozzarella'),
+('Baked Eggplant with Parmesan'),
+('Beefy Baked Ravioli'),
+('Funnel Cake'),
+('Beignets'),
+('Taco Bell'),
+('Homemade pizza'),
+('Hot wings'),
+('Lasagna'),
+('One of your favorite childhood meals'),

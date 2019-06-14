@@ -10,6 +10,7 @@ This CSS resource incorporates links to font software which is the valuable copy
 body {
     font-family: "Honey Dew", serif;
     background-image: url("../images/engagement-1718244_1920.jpeg");
+    background-position: right top;
     background-repeat: no-repeat;
     display: flex;
     min-height: 100vh;
@@ -100,8 +101,9 @@ nav ul a {
 }
 
 .dashboard-cont {
-    width:100%;
-    margin-left: 0px;
+    width:90vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .idea {
@@ -111,4 +113,8 @@ nav ul a {
     font-size: 5em;
     -webkit-text-stroke: 1px #242424;
     text-shadow: 0px 0px 14px rgb(133, 143, 0);
+}
+
+.av-img {
+    max-height: 200px;
 }
