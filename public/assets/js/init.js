@@ -1,10 +1,10 @@
 console.log('js loaded');
 
-var test = 
-$('.swiper-slide').children('.idea').each(function () {
-    console.log(this.innerHTML);
-});
-console.log(test);
+//var test = 
+//$('.swiper-slide').children('.idea').each(function () {
+//    console.log(this.innerHTML);
+//});
+//console.log(test);
 
 $(document).ready(function (){
     $('.modal').modal();
