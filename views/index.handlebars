@@ -51,7 +51,7 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
        <div class="row">
-    <form class="col s12">
+    <form class="col s12" id="login" action="auth" method="POST">
         <br>
       <div class="row">
         <div class="input-field col s6">
@@ -60,9 +60,9 @@
         </div>
         <div class="input-field col s6">
          <input placeholder="HoneyDew" id="user" name="secret-word" type="text" class="validate">
-          <label for="last_name">Secret Word</label>
+          <label for="secret_word">Secret Word</label>
         </div>
-           <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-purple btn-flat">Log In</button>
+           <button type="submit" form="login" class="modal-action modal-close waves-effect waves-purple btn-flat">Log In</button>
       </div>
       </div>
     </form> <div class="modal-footer">
