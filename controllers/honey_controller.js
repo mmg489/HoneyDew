@@ -120,5 +120,34 @@ router.post('/api/users/register', function (req, res) {
 });
 
 
+// login verification
+router.post('/auth', function (req, res) {
+    var acct_name = req.body.acct_name;
+    var secret_word = req.body.secretword;
+    if (acct_name && secret_word) {
+        users.login(acct_name, secret_word, function (results) {
+            console.log(results);
+            if (results.length > 0) {
+                req.session.loggedin = true;
+                req.session.username = acct_name;
+                res.redirect('/dashboard/' + acct_name);
+            } else {
+                res.send('Incorrect Username and/or Password!');
+            }
+            res.end();
+        });
+    } else {
+        res.send('Please enter Username and Password!');
+        res.end();
+    }
+});
+
+router.get('/dashboard/:acct_name', function (req, res) {
+    users.data(req.params.acct_name, function (data) {
+        res.render('dashboard', { user_data: data })
+        console.log(data);
+    })
+});
+
 // exports express router
 module.exports = router;
