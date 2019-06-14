@@ -24,5 +24,8 @@
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
     "swiper": "^4.5.0"
+  },
+  "devDependencies": {
+    "express-session": "^1.16.2"
   }
 }

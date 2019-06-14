@@ -2,6 +2,7 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var app = express();
 
@@ -22,8 +23,14 @@ app.set('view engine', 'handlebars');
 // connects css
 app.use(express.static(__dirname + '/public')); 
 
+app.use(session({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: true
+}));
+
 // imports 'controller' file as router
-var routes = require('./controllers/honey_controller');
+var routes = require('./controllers/honey_controller.js');
 
 app.use(routes);
 

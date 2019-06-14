@@ -59,19 +59,19 @@ var orm = {
         });
     },
 
-    createUser: function(table,object,cb) {
+    createUser: function (table, object, cb) {
         var queryString = "INSERT INTO " + table;
 
         queryString += " SET ?";
-       
+
 
         console.log(queryString);
 
-        connection.query(queryString, object, function(err, result) {
+        connection.query(queryString, object, function (err, result) {
             if (err) {
                 throw err;
             }
-             cb(result);
+            cb(result);
         });
     },
 
@@ -102,6 +102,26 @@ var orm = {
 
         console.log(queryString);
         connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
+    },
+    login: function (acct_name, secret_word, cb) {
+        if (acct_name && secret_word) {
+            connection.query('SELECT * FROM users WHERE acct_name = ? AND secret_word = ?', [acct_name, secret_word], function (err, result) {
+
+                if (err) {
+                    throw err;
+                }
+                cb(result);
+            })
+        };
+    },
+    find: function (table, col, val, cb) {
+        var queryString = 'SELECT * FROM ' + table + ' WHERE ' + col + ' = ?';
+        connection.query(queryString, val, function (err, result) {
             if (err) {
                 throw err;
             }
