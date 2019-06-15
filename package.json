@@ -4,7 +4,8 @@
   "description": "Couple's swipe app for meal/date ideas",
   "main": "server.js",
   "scripts": {
-    "test": "nyc mocha",
+    "test": "mocha",
+    "coverage": "nyc npm run test",
     "start": "node server.js"
   },
   "repository": {
