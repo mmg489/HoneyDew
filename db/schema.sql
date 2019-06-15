@@ -10,6 +10,9 @@ CREATE TABLE users (
     secret_word VARCHAR(255) NOT NULL,
     userone_name VARCHAR(255) NOT NULL,
     usertwo_name VARCHAR(255) NOT NULL,
+    currentuser VARCHAR(255),
+    likedbyuserone VARCHAR(255),
+    likedbyusertwo VARCHAR(255),
     PRIMARY KEY (id)
 );
 
