@@ -4,19 +4,25 @@
         <div class="row center-align">
             <div class="col l1 center-align">
                 <img src="/assets/images/avatar_placeholder.png" class="av-img center-align">
-                <p class="center-align">Welcome, NAME</p>
+                {{#each user_data}}
+                <p class="center-align">Welcome, {{this.userone_name}}</p>
+                {{/each}}
             </div>
-            <div class="col l8">
-                <h1>Dashboard for COUPLENAME</h1>
+            <div class="col l10">
+                {{#each user_data}}
+                <h1>Dashboard for {{this.couple_name}}</h1>
+                {{/each}}
             </div>
             <div class="col l1 center-align">
                 <img src="/assets/images/avatar_placeholder2.png" class="av-img center-align">
-                <p class="center-align">Welcome, NAME</p>
+                {{#each user_data}}
+                <p class="center-align">Welcome, {{this.usertwo_name}}</p>
+                {{/each}}
             </div>
         </div>
         <div class="row">
             <h3>Tell us what you're into!</h3>
-            <a href="/api/foods/like" class="btn-large">Meal Ideas</a> <a href="/api/activities/like"
+            <a href="/api/foods/like/" class="btn-large">Meal Ideas</a> <a href="/api/activities/like"
                 class="btn-large">Date Ideas</a>
         </div>
         <div class="row">

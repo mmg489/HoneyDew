@@ -56,10 +56,11 @@ router.put('/api/foods/undo/:id', function (req, res) {
 });
 
 // shows 'liked' food ideas from both users
-router.get('/api/foods/both', function (req, res) {
-    foods.both(function (data) {
+router.get('/api/foods/both:uniqueurl', function (req, res) {
+    foods.both(req.params.uniqueurl,function (data) {
+        console.log(data);
         res.render('both-foods', { foods_data: data })
-    })
+    });
 });
 
 
@@ -95,14 +96,15 @@ router.put('/api/activities/undo/:id', function (req, res) {
 });
 
 // show 'liked ideas from both users
-router.get('/api/foods/both', function (req, res) {
-    activities.both(function (data) {
+router.get('/api/foods/both:uniqueurl', function (req, res) {
+    activities.both(req.params.uniqueurl, function (data) {
+        console.log(data);
         res.render('both-activities', { activites_data: data })
     })
 });
 
 
-
+// USER ROUTES
 
 // creates new user
 router.post('/api/users/register', function (req, res) {
@@ -126,11 +128,13 @@ router.post('/auth', function (req, res) {
     var secret_word = req.body.secretword;
     if (acct_name && secret_word) {
         users.login(acct_name, secret_word, function (results) {
-            console.log(results);
+            console.log('results: \n' + JSON.stringify(results));
             if (results.length > 0) {
                 req.session.loggedin = true;
                 req.session.username = acct_name;
-                res.redirect('/dashboard/' + acct_name);
+                // var data = JSON.stringify(results);
+                console.log(results[0].uniqueurl);
+                res.redirect('/dashboard/' + results[0].uniqueurl);
             } else {
                 res.send('Incorrect Username and/or Password!');
             }
@@ -142,10 +146,10 @@ router.post('/auth', function (req, res) {
     }
 });
 
-router.get('/dashboard/:acct_name', function (req, res) {
-    users.data(req.params.acct_name, function (data) {
-        res.render('dashboard', { user_data: data })
-        console.log(data);
+router.get('/dashboard/:uniqueurl', function (req, res) {
+    users.data(req.params.uniqueurl, function (data) {
+        // console.log(data);
+        res.render('dashboard', { user_data: data });
     })
 });
 
