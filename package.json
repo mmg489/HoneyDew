@@ -4,8 +4,8 @@
   "description": "Couple's swipe app for meal/date ideas",
   "main": "server.js",
   "scripts": {
-    "test": "mocha",
     "lint": "eslint --quiet .",
+    "test": "nyc mocha",
     "start": "node server.js"
   },
   "repository": {
@@ -20,10 +20,12 @@
   "homepage": "https://github.com/mmg489/HoneyDew#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chai-http": "^4.3.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
+    "nyc": "^14.1.1",
     "swiper": "^4.5.0"
   },
   "devDependencies": {

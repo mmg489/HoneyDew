@@ -28,3 +28,8 @@ CREATE TABLE activities (
     swipe int NOT NULL DEFAULT 0,
     PRIMARY KEY (id)
 );
+
+CREATE TRIGGER before_insert_users
+  BEFORE INSERT ON users
+  FOR EACH ROW
+  SET new.uniqueurl = uuid();

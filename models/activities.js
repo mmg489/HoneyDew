@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 
 // creates object with methods - uses ORM and controller to manipulate database table
 var activities = {
-  all: function(cb) {
+  all: function(uniqueurl, cb) {
     orm.all('activities', function(res) {
       cb(res);
     });
