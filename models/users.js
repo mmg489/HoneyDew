@@ -7,11 +7,14 @@ var users = {
     login: function (acct_name, secret_word, cb) {
         orm.login(acct_name, secret_word, cb);
     },
-    create: function (set, cb) {
-        orm.create('users', set, cb);
+    create: function (table, col, vals, cb) {
+        orm.create(table, col, vals, cb);
+    },
+    insert: function (table, col, vals, cb) {
+        orm.insert(table, col, vals, cb);
     },
     data: function (uniqueurl, cb) {
-        orm.find('users', 'uniqueurl', uniqueurl, function (res) {
+        orm.find('users', 'uniqueurl', "`" + uniqueurl + "'", function (res) {
             cb(res);
         })
     }

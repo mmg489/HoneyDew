@@ -13,6 +13,14 @@ CREATE TABLE users (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE user_likes (
+    id int NOT NULL AUTO_INCREMENT,
+    uniqueurl VARCHAR(36) NOT NULL,
+    liked_foods VARCHAR(255),
+    liked_activities VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE foods (
     id int NOT NULL AUTO_INCREMENT,
     meal_name VARCHAR(255) NOT NULL,
