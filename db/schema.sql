@@ -10,9 +10,6 @@ CREATE TABLE users (
     secret_word VARCHAR(255) NOT NULL,
     userone_name VARCHAR(255) NOT NULL,
     usertwo_name VARCHAR(255) NOT NULL,
-    currentuser VARCHAR(255),
-    likedbyuserone VARCHAR(255),
-    likedbyusertwo VARCHAR(255),
     PRIMARY KEY (id)
 );
 
@@ -31,3 +28,8 @@ CREATE TABLE activities (
     swipe int NOT NULL DEFAULT 0,
     PRIMARY KEY (id)
 );
+
+CREATE TRIGGER before_insert_users
+  BEFORE INSERT ON users
+  FOR EACH ROW
+  SET new.uniqueurl = uuid();
