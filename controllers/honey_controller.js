@@ -27,8 +27,8 @@ router.get('/both', function (req, res) {
 // ROUTES FOR FOODS
 
 // inital swiping and likeing 
-router.get('/api/foods/like', function (req, res) {
-    foods.all(function (data) {
+router.get('/api/foods/like/:uniqueurl', function (req, res) {
+    foods.all(req.params.uniqueurl, function (data) {
         res.render('swipe-foods', { foods_data: data });
         console.log(data);
     })
@@ -128,12 +128,9 @@ router.post('/auth', function (req, res) {
     var secret_word = req.body.secretword;
     if (acct_name && secret_word) {
         users.login(acct_name, secret_word, function (results) {
-            console.log('results: \n' + JSON.stringify(results));
             if (results.length > 0) {
                 req.session.loggedin = true;
                 req.session.username = acct_name;
-                // var data = JSON.stringify(results);
-                console.log(results[0].uniqueurl);
                 res.redirect('/dashboard/' + results[0].uniqueurl);
             } else {
                 res.send('Incorrect Username and/or Password!');
@@ -146,9 +143,16 @@ router.post('/auth', function (req, res) {
     }
 });
 
-router.get('/dashboard/:uniqueurl', function (req, res) {
+router.get('/dashboard/:uniqueurl/', function (req, res) {
+    // var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
-        // console.log(data);
+        res.render('userselection', { user_data: data });
+    })
+});
+
+router.get('/dashboard/:uniqueurl/:username', function (req, res) {
+    var username = req.params.username;
+    users.data(req.params.uniqueurl, function (data) {
         res.render('dashboard', { user_data: data });
     })
 });

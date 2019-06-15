@@ -9,6 +9,8 @@ console.log('js loaded');
 $(document).ready(function (){
     $('.modal').modal();
 
+    $('#userselection').modal('open');
+
     $('.sidenav').sidenav();
 
     $('.dropdown-trigger').dropdown();

@@ -14,31 +14,31 @@
         </ul>
     </div>
 </nav>
+    {{#each user_data}}
+
     <div class="dashboard-cont center-align">
 
         <div class="row center-align">
             <div class="col l1 center-align">
                 <img src="/assets/images/avatar_placeholder.png" class="av-img center-align">
-                {{#each user_data}}
                 <p class="center-align">Welcome, {{this.userone_name}}</p>
-                {{/each}}
+
             </div>
             <div class="col l10">
-                {{#each user_data}}
                 <h1>Dashboard for {{this.couple_name}}</h1>
-                {{/each}}
+
             </div>
             <div class="col l1 center-align">
                 <img src="/assets/images/avatar_placeholder2.png" class="av-img center-align">
-                {{#each user_data}}
                 <p class="center-align">Welcome, {{this.usertwo_name}}</p>
-                {{/each}}
+
             </div>
         </div>
         <div class="row">
             <h3>Tell us what you're into!</h3>
-            <a href="/api/foods/like/" class="btn-large">Meal Ideas</a> <a href="/api/activities/like"
-                class="btn-large">Date Ideas</a>
+            <a href="/api/foods/like/{{this.uniqueurl}}" class="btn-large">Meal
+                Ideas</a> <a href="/api/activities/like/{{this.unqiueurl}}" class="btn-large">Date Ideas</a>
+
         </div>
         <div class="row">
             <h3>Show me what we both like!</h3>
@@ -49,4 +49,5 @@
     </div>
 
 
+    {{/each}}
 </main>
