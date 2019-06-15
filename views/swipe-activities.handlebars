@@ -1,4 +1,22 @@
-<main class="swipe-page col s12 m6">
+<main> 
+    <nav>
+    <div class="nav-wrapper">
+
+        <ul class="right">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown4"><i
+                        class="large material-icons">insert_menu</i></a></li>
+
+            <!-- Dropdown Structure -->
+            <ul id="dropdown4" class="dropdown-content">
+                <li><a href="/dashboard">Home</a></li>
+                <li class="divider"></li>
+                <li><a href="/">Sign Out</a></li>
+            </ul>
+        </ul>
+    </div>
+</nav>
+    <div class="swipe-page col s12 m6">
 
     <div class="swiper-container">
         <p class="swipe-header center">Date Ideas:</p>
@@ -11,5 +29,5 @@
             {{/each}}
         </div>
     </div>
-    
+    </div>
 </main>
