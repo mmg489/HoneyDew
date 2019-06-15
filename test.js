@@ -1,4 +1,4 @@
-var chai = require("chai");
+var chai = require('chai');
 var chaiHttp = require('chai-http');
 //var input = require("./honey_controller.js");
 var should = chai.should();
@@ -11,13 +11,13 @@ var users = require('./models/users.js');
 
 
 chai.use(chaiHttp);
-describe('/GET foods', () => {
-    it('it should GET all the foods', (done) => {
+describe('/GET foods', function() {
+    it('it should GET all the foods', function(done) {
         chai.request(server)
             .get('/api/foods/like')
-            .end((err, res) => {
+            .end(function (err, res) {
                 res.should.have.status(200);
-            done();
+                done();
             });
     });
 });
