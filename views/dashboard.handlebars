@@ -1,21 +1,37 @@
 <main>
+    <nav>
+    <div class="nav-wrapper">
+
+        <ul class="right">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown4"><i
+                        class="large material-icons">insert_menu</i></a></li>
+
+            <!-- Dropdown Structure -->
+            <ul id="dropdown4" class="dropdown-content">
+                <li><a href="/">Sign Out</a></li>
+            </ul>
+        </ul>
+    </div>
+</nav>
+
     {{#each user_data}}
 
     <div class="dashboard-cont center-align">
 
         <div class="row center-align">
-            <div class="col l1 center-align">
+            <div class="col l1 center-align hide-on-small-only">
                 <img src="/assets/images/avatar_placeholder.png" class="av-img center-align">
-                <p class="center-align">Welcome, {{this.userone_name}}</p>
+                <p class="right-align">Welcome, {{this.userone_name}}</p>
 
             </div>
-            <div class="col l10">
+            <div class="col l8">
                 <h1>Dashboard for {{this.couple_name}}</h1>
 
             </div>
-            <div class="col l1 center-align">
+            <div class="col l1 center-align hide-on-small-only">
                 <img src="/assets/images/avatar_placeholder2.png" class="av-img center-align">
-                <p class="center-align">Welcome, {{this.usertwo_name}}</p>
+                <p class="right-align">Welcome, {{this.usertwo_name}}</p>
 
             </div>
         </div>

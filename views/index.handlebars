@@ -1,9 +1,15 @@
 <main>
+<nav>
+    <div class="nav-wrapper">
+
+
+    </div>
+</nav>
 
   <div class="container">
     <div class="row center-align">
-      <div class="col s5"></div>
-      <div class="col s7">
+      <div class="col l5 hide-on-small-only"></div>
+      <div class="col l7 s12">
     <img src="/assets/images/logo_transparent_background.png" width="380px">
     <div class="statement">
       <p>Here to make those though everyday decisions <br> with your partner easier !</p>
@@ -20,31 +26,31 @@
     <div id="sign-up" class="modal">
       <div class="modal-content">
         <div class="row">
-          <form class="col s12" type="text" id="newuser" action="api/users/register" method="POST">
+          <form class="col l12 s" type="text" id="newuser" action="api/users/register" method="POST">
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col l6 s12">
                 <input placeholder="The HoneyDew Couple" id="newuser" name="acct_name" type="text" class="validate">
                 <label for="couple-name">Couple Name</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col l6 s12">
                 <input placeholder="HoneyDew" id="newuser" name="secret_word" type="text" class="validate">
                 <label for="first_name">Secret Word</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col l6 s12">
                 <input placeholder="Blake Lively" id="newuser" name="userone_name" type="text" class="validate">
                 <label for="first_name">Your Name</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col l6 s12">
                 <input placeholder="Ryan Reynolds" id="newuser" name="usertwo_name" type="text" class="validate">
                 <label for="last_name">Your Better Half</label>
               </div>
-              <button type="submit" id= "newUserBtn" form="newuser"
-                class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
             </div>
           </form>
         </div>
       </div>
       <div class="modal-footer">
+              <button type="submit" id= "newUserBtn" form="newuser"
+                class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
         <a href="#!" class="modal-close waves-effect waves-purple btn-flat">Cancel</a>
       </div>
     </div>
@@ -59,20 +65,20 @@
           <form class="col s12" id="login" action="auth" method="POST">
             <br>
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col l6 s12">
                 <input placeholder="The HoneyDew Couple" id="user" name="acct_name" type="text" class="validate">
                 <label for="first_name">Couple Name</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col l6 s12">
                 <input placeholder="HoneyDew" id="user" name="secretword" type="text" class="validate">
                 <label for="secret_word">Secret Word</label>
               </div>
-              <button type="submit" form="login" class="modal-action modal-close waves-effect waves-purple btn-flat">Log
-                In</button>
+                
             </div>
         </div>
         </form>
         <div class="modal-footer">
+              <button type="submit" form="login" class="modal-action modal-close waves-effect waves-purple btn-flat">Log In</button>
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
         </div>
       </div>
