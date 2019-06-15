@@ -68,9 +68,10 @@ router.get('/api/foods/both:uniqueurl', function (req, res) {
 // ROUTES FOR ACTIVITIES
 
 // the initial swiping and liking
-router.get('/api/activities/like', function (req, res) {
-    activities.all(function (data) {
-        res.render('swipe-activities', { activites_data: data })
+router.get('/api/activities/like/:uniqueurl', function (req, res) {
+    activities.all(req.params.uniqueurl, function (data) {
+        res.render('swipe-activities', { activities_data: data });
+        console.log(data);
     })
 });
 
@@ -109,6 +110,7 @@ router.get('/api/foods/both:uniqueurl', function (req, res) {
 // creates new user
 router.post('/api/users/register', function (req, res) {
     newUser = {
+        "uniqueurl": "UUID()",
         "acct_name": req.body.acct_name.split(' ').join('_'),
         "couple_name": req.body.acct_name,
         "secret_word": req.body.secret_word,
