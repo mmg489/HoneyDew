@@ -4,9 +4,10 @@
   "description": "Couple's swipe app for meal/date ideas",
   "main": "server.js",
   "scripts": {
-    "test": "nyc mocha",
+    "test": "mocha --reporter dot",
     "lint": "eslint **/*.js --quiet",
-    "start": "node server.js"
+    "start": "node server.js",
+    "coverage": "nyc --reporter=html --reporter=text mocha --exit"
   },
   "repository": {
     "type": "git",

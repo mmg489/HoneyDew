@@ -47,7 +47,7 @@ router.put('/api/foods/liked/:id', function (req, res) {
     });
 });
 
-// undo 'liked' 
+// undo 'liked' for foods
 router.put('/api/foods/undo/:id', function (req, res) {
     foods.undo(req.params.id, function (result) {
         console.log(result);
