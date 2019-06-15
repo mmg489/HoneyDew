@@ -59,7 +59,7 @@ var orm = {
         });
     },
 
-    createUser: function (table, object, cb) {
+    create: function (table, object, cb) {
         var queryString = "INSERT INTO " + table;
 
         queryString += " SET ?";

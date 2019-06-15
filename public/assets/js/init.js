@@ -3,6 +3,8 @@ console.log('js loaded');
 $(document).ready(function (){
     $('.modal').modal();
 
+    $('#userselection').modal('open');
+
     $('.sidenav').sidenav();
 
     $('.dropdown-trigger').dropdown();
@@ -44,7 +46,7 @@ $(document).ready(function (){
             $(this).toggleClass('liked unliked');
 
             $('.liked').css({
-                "background-image": "url('../../assets/images/heart.png')",
+                "background-image": "url('../../../assets/images/heart.png')",
                 "background-size": "30%"
             });
         }
