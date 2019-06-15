@@ -46,8 +46,8 @@ VALUES
 INSERT INTO foods
     (meal_name, meal_img)
 VALUES
-    ('Hamburger','Hamburger'),
-    ('Turkey Burger','Turkey-Burger'),
+    ('Hamburger','https://i.imgur.com/qFYDEhxb.jpg'),
+    ('Turkey Burger','https://i.imgur.com/bx4wzSrb.jpg'),
     ('Chicken Sandwich','Chicken-Sandwich'),
     ('Chicken Strips','Chicken-Strips'),
     ('Hot Dog','Hot-Dog'),
