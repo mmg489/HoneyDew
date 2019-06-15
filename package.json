@@ -4,8 +4,8 @@
   "description": "Couple's swipe app for meal/date ideas",
   "main": "server.js",
   "scripts": {
-    "lint": "eslint --quiet .",
     "test": "nyc mocha",
+    "lint": "eslint **/*.js --quiet",
     "start": "node server.js"
   },
   "repository": {
@@ -30,10 +30,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "eslint": "^4.19.1",
     "express-session": "^1.16.2",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0"
+    "mocha": "^6.1.4"
   }
 }
