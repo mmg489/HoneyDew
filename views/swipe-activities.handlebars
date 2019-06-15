@@ -9,13 +9,16 @@
 
             <!-- Dropdown Structure -->
             <ul id="dropdown4" class="dropdown-content">
-                <li><a href="/dashboard">Home</a></li>
+                    {{#each user_data}}
+                <li><a href="/dashboard/{{this.uniqueurl}}">Home</a></li>
+                {{/each}}
                 <li class="divider"></li>
                 <li><a href="/">Sign Out</a></li>
             </ul>
         </ul>
     </div>
 </nav>
+
     <div class="swipe-page col s12 m6">
 
     <div class="swiper-container">
@@ -23,7 +26,7 @@
         <div class="swiper-wrapper">
             {{#each activites_data}}
             <div class="swiper-slide unliked" value={{this.id}}>
-                <img src="https://cors-anywhere.herokuapp.com/https://www.google.com/search?hl=en&tbm=isch&source=hp&biw=1451&bih=731&ei=AgwEXcvOH6Ke_Qb0qKGIDg&q={{event_img}}" alt="">
+                <img src="{{event_img}}" alt="">
                 <h4 class="idea" val={{event_name}}>{{event_name}}</h4>
             </div>
             {{/each}}
