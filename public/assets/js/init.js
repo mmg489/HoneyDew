@@ -1,12 +1,6 @@
 console.log('js loaded');
 
-//var test = 
-//$('.swiper-slide').children('.idea').each(function () {
-//    console.log(this.innerHTML);
-//});
-//console.log(test);
-
-$(document).ready(function (){
+$(document).ready(function () {
     $('.modal').modal();
 
     $('#userselection').modal('open');
@@ -14,13 +8,13 @@ $(document).ready(function (){
     $('.sidenav').sidenav();
 
     $('.dropdown-trigger').dropdown();
-    
+
 
     var mySwiper = new Swiper('.swiper-container');
 
-    
-    $('.swiper-slide').dblclick(function() {
-        
+
+    $('.swiper-slide').dblclick(function () {
+
         if ($(this).hasClass('liked')) {
 
             var food_id = $(this).attr('value');
@@ -39,17 +33,19 @@ $(document).ready(function (){
                 "background-size": "100%"
             });
 
-        } else if ($(this).hasClass('unliked')){
+        } else if ($(this).hasClass('unliked')) {
 
             var food_id = $(this).attr('value');
+            // var pathArray = window.location.pathname.split('/');
+            var path = window.location.href;
 
             $.ajax({
                 method: "PUT",
-                url: "/api/foods/liked/" + food_id
-            }).then(function (data){
+                url: path + '/' + food_id
+            }).then(function (data) {
                 console.log(food_id + ' liked');
             })
-        
+
             $(this).toggleClass('liked unliked');
 
             $('.liked').css({

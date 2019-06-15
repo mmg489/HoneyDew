@@ -22,12 +22,12 @@
     <div class="swipe-page col s12 m6">
 
     <div class="swiper-container">
-        <p class="swipe-header center">Date Ideas:</p>
+        <h3 class="swiper-header center">Date Ideas:</h3>
         <div class="swiper-wrapper">
-            {{#each activites_data}}
+            {{#each activities_data}}
             <div class="swiper-slide unliked" value={{this.id}}>
-                <img src="{{event_img}}" alt="">
-                <h4 class="idea" val={{event_name}}>{{event_name}}</h4>
+                <img src="https://www.google.com/search?hl=en&tbm=isch&source=hp&biw=1451&bih=731&ei=AgwEXcvOH6Ke_Qb0qKGIDg&q={{meal_img}}" alt="">
+                <h4 class="idea">{{event_name}}</h4>
             </div>
             {{/each}}
         </div>
