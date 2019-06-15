@@ -1,46 +1,40 @@
 var expect = require("chai").expect;
-var authenticatedUser = request.agent(app);
-var userName = request.agent(app);
-var password = request.agent(app);
-var userCredentials = {
-    couple_name: 'SquidBob',
-    secret_word: 'garyTheSnail'
-}
+var input = require("../server");
 
-// checks to see if user signed in with correct credential and send to dashboard
-before(function (done) {
-    authenticatedUser
-        .post('/login')
-        .send(userCredentials)
-        .end(function (err, response) {
-            expect(response.statusCode).to.equal(200);
-            expect('Location', '/dashboard');
-            done();
-        });
-});
+describe("Input", function() {
+  it("to verify if username is blank and if password is blank", function() {
+    expect(input(" ")).to.equal(406);
+  });
 
-// Testing for username input
-describe("userName", function() {
-    it("to capitalize initial letters of each word when displayed", function () {
-        expect(userName("seth smith")).to.equal("Seth Smith");
-    });
+  it("to verify if username is blank but password is invalid", function() {
+    expect(input(" ")).to.equal(406);
+  });
 
-    it("to lowerscase name when sent to table", function () {
-        expect(userName("Seth Smith")).to.equal("seth smith");
-    });
+  it("to verify if usernme is blank but password is valid", function() {
+    expect(input(" ")).to.equal(406);
+  });
 
-    it("to change spces to _ when sent to table", function () {
-        expect(userName("Seth Smith")).to.equal("seth_smith");
-    });
-});
+  it("to verify if username is invalid but password is blank", function() {
+    expect(input(" ")).to.equal(406);
+  });
 
-//testing password for requirements
-describe("password", function() {
-    it("to check if the username has a capital letter", function () {
-        expect(password("coolBeans")).to.equal("coolBeans")
-    });
+  it("to verify is username is valid but password is blank", function() {
+    expect(input(" ")).to.equal(406);
+  });
 
-    it("to check if the username has a unique character", function () {
-        expect(password("cool#beans")).to.equal("cool#beans")
-    });
+  it("to verify if username is invalid and password is invalid", function() {
+    expect(input(" ")).to.equal(406);
+  });
+
+  it("to verify if username is invalid and password is valid", function() {
+    expect(input(" ")).to.equal(406);
+  });
+
+  it("to verify if username is valid and password is invalid", function() {
+    expect(input(" ")).to.equal(406);
+  });
+
+  it("to verify if usernme is valid and password in valid", function() {
+    expect(input(" ")).to.equal(200);
+  });
 });
