@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-var input = require("../server");
+var input = require("./server");
 
 describe("Input", function() {
   it("to verify if username is blank and if password is blank", function() {
