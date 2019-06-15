@@ -110,12 +110,12 @@ router.get('/api/foods/both:uniqueurl', function (req, res) {
 // creates new user
 router.post('/api/users/register', function (req, res) {
     newUser = {
-        "uniqueurl": "UUID()",
-        "acct_name": req.body.acct_name.split(' ').join('_'),
-        "couple_name": req.body.acct_name,
-        "secret_word": req.body.secret_word,
-        "userone_name": req.body.userone_name,
-        "usertwo_name": req.body.usertwo_name
+        'uniqueurl': "UUID()",
+        'acct_name': req.body.acct_name.split(' ').join('_'),
+        'couple_name': req.body.acct_name,
+        'secret_word': req.body.secret_word,
+        'userone_name': req.body.userone_name,
+        'usertwo_name': req.body.usertwo_name
     };
     users.new(function (result) {
         console.log(result);
