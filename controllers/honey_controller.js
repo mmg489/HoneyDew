@@ -30,6 +30,7 @@ router.get('/both', function (req, res) {
 router.get('/api/foods/like/:uniqueurl', function (req, res) {
     foods.all(req.params.uniqueurl, function (data) {
         res.render('swipe-foods', { foods_data: data });
+
         console.log(data);
     });
 });
@@ -39,9 +40,10 @@ router.get('/api/foods/like/:uniqueurl', function (req, res) {
 //     foods.create('');
 // })
 
-//updates the 'liked' count for foods
-router.put('/api/foods/liked/:id', function (req, res) {
-    foods.update(req.params.id, function (result) {
+//updates the 'liked' column for foods
+router.put('/api/foods/like/:uniqueurl/:id', function (req, res) {
+    var uniqueurl = req.params.uniqueurl;
+    users.insert('user_likes', 'uniqueurl, liked_foods, ', uniqueurl + ', ' + req.params.id, function (result) {
         console.log(result);
         res.sendStatus(200);
     });
@@ -81,8 +83,8 @@ router.get('/api/activities/like/:uniqueurl', function (req, res) {
 // });
 
 // Updates the 'like' count for activity ideas
-router.put('/api/activities/liked/:id', function (req, res) {
-    activities.update(req.params.id, function (result) {
+router.put('/api/activities/liked/:uniqueurl/:id', function (req, res) {
+    activities.create(req.params.id, function (result) {
         console.log(result);
         res.sendStatus(200);
     });
