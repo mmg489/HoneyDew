@@ -159,6 +159,18 @@ router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     })
 });
 
+router.get('/dashboard/:uniqueurl/:username', function (req, res) {
+    var username = req.params.username;
+    users.data(req.params.uniqueurl, function (data) {
+        res.render('both_foods', { meal_img:'https://i.pinimg.com/originals/03/c4/15/03c415e3dc2ca9fdac2c1e747dde4696.jpg'});
+    })
+});
 
+router.get('/dashboard/:uniqueurl/:username', function (req, res) {
+    var username = req.params.username;
+    users.data(req.params.uniqueurl, function (data) {
+        res.render('both_activities', { event_img:'https://www.highlandvillage.org/ImageRepository/Document?documentID=5524'});
+    })
+});
 // exports express router
 module.exports = router;

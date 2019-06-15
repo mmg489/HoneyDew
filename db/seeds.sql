@@ -1,13 +1,13 @@
 INSERT INTO activities
     (event_name, event_img)
 VALUES
-    ('Movie Night','Movie-Night'),
-    ('Netflix and Chill','Netflix-and-Chill'),
-    ('Gym Date','Gym-Date'),
-    ('Bonfire','Bonfire'),
-    ('Hike/Park','Hike/Park'),
-    ('Concert','Concert'),
-    ('Board Game Night','Board-Game-Night'),
+    ('Movie Night','https://moneydotcomvip.files.wordpress.com/2014/11/141118_em_movieseats1.jpg'),
+    ('Netflix and Chill','https://laurencecchi.com/wp-content/uploads/2017/01/netflix1-1000x700.jpg'),
+    ('Gym Date','https://ballnroll.com/Uploads/Blogs/LoveDating/2014GymDate/Surviving%20The%20Gym%20Date.jpg'),
+    ('Bonfire','https://i.pinimg.com/564x/1c/78/52/1c785215d823552f3a9fa30e9b95414e.jpg'),
+    ('Hike/Park','https://i.pinimg.com/564x/3b/23/40/3b2340bb07de785d5fed49882cbc1030.jpg'),
+    ('Concert','https://i.pinimg.com/564x/26/54/9d/26549d4b6ef4321e2dcac7affe61437e.jpg'),
+    ('Board Game Night','https://www.studyfinds.org/wp-content/uploads/2019/02/AdobeStock_84428602-816x520.jpeg'),
     ('Arcade/Gaming Night','Arcade/Gaming-Night'),
     ('Shopping','Shopping'),
     ('Bowling','Bowling'),
