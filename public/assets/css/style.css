@@ -26,32 +26,43 @@ p {
     color: black;
     margin: 10px;
 }
-
+h5{
+    color:rgb(3, 180, 193) !important;
+}
 a {
     font-family: "Honey Dew", serif;
 }
 
-h5 {
+h4 {
     color: #F2BF27 !important;
 }
 
-.statement, .or {
+.statement {
+    font-size: 25px;
+    color: black;
+    margin-top:-80px;
+}
+.or{
     font-size: 25px;
     color: black;
 }
-
 footer.yellow.lighten-3 {
     padding: 10px 0;
-    background-color: rgb(134, 246, 160) !important;
+    background-color: rgb(208,233,129) !important;
     color: #F2BF27 !important;
 }
 
 nav {
-    background-color: rgb(134, 246, 160);
+    background-color: rgb(208,233,129);
+    
 }
 
-.btn, .btn-large {
+.btn, .btn-large, .btn-flat{
     background-color: #F2BF27 !important;
+    color:white;
+    font-family: "Honey Dew";
+    font-weight: bolder;
+    font-size: 20px !important;
 }
 
 .brand-logo {
@@ -67,7 +78,48 @@ nav {
 #sign-up {
     font-size: x-large;
     font-weight: bolder;
-    background-color: paleturquoise;
+    background-color: rgb(208,233,129);
+    
+}
+#newuser{
+    font-family:  "Honey Dew" !important;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 40px 0 8px 0 !important;
+    color:#F2BF27;
+}
+#user{
+    font-family:  "Honey Dew" !important;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 40px 0 8px 0 !important;
+    color:#F2BF27;
+}
+.modal {
+    font-family:  "Honey Dew" !important;
+     font-size: x-large;
+     font-weight: bolder;
+     background-color: rgb(208,233,129)!important;
+     font-family:  "Honey Dew" !important;
+ }
+.modal-footer{
+   font-family:  "Honey Dew" !important;
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgb(208,233,129)!important;
+    font-family:  "Honey Dew" !important;
+}
+.input-field > label {
+    color:rgb(3, 180, 193) !important;
+    font-size: 30px;
+    
+}
+
+#newUserBtn{
+    font-family: "Honey Dew";
+    font-size: 25px !important;
+    font-weight: bolder;
+    color:white !important;
 }
 
 .dropdown-trigger {
@@ -116,4 +168,8 @@ nav ul a {
 
 .av-img {
     max-height: 200px;
+}
+
+.row .col.l1 {
+    width:15%;
 }

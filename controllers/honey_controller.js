@@ -56,10 +56,11 @@ router.put('/api/foods/undo/:id', function (req, res) {
 });
 
 // shows 'liked' food ideas from both users
-router.get('/api/foods/both', function (req, res) {
-    foods.both(function (data) {
+router.get('/api/foods/both:uniqueurl', function (req, res) {
+    foods.both(req.params.uniqueurl,function (data) {
+        console.log(data);
         res.render('both-foods', { foods_data: data })
-    })
+    });
 });
 
 
@@ -95,8 +96,9 @@ router.put('/api/activities/undo/:id', function (req, res) {
 });
 
 // show 'liked ideas from both users
-router.get('/api/foods/both', function (req, res) {
-    activities.both(function (data) {
+router.get('/api/foods/both:uniqueurl', function (req, res) {
+    activities.both(req.params.uniqueurl, function (data) {
+        console.log(data);
         res.render('both-activities', { activites_data: data })
     })
 });

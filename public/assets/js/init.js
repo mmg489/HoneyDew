@@ -1,5 +1,11 @@
 console.log('js loaded');
 
+//var test = 
+//$('.swiper-slide').children('.idea').each(function () {
+//    console.log(this.innerHTML);
+//});
+//console.log(test);
+
 $(document).ready(function (){
     $('.modal').modal();
 
@@ -8,6 +14,7 @@ $(document).ready(function (){
     $('.sidenav').sidenav();
 
     $('.dropdown-trigger').dropdown();
+    
 
     var mySwiper = new Swiper('.swiper-container');
 

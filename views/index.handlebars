@@ -1,15 +1,15 @@
 <main>
 
   <div class="container">
-    <div class="row main-card">
-      <div class="col s12"></div>
-    </div>
-
+    <div class="row center-align">
+      <div class="col s5"></div>
+      <div class="col s7">
     <img src="/assets/images/logo_transparent_background.png" width="380px">
     <div class="statement">
       <p>Here to make those though everyday decisions <br> with your partner easier !</p>
     </div>
     <!-- Modal Trigger -->
+    
     <button data-target="sign-up" class="btn modal-trigger">Sign Up</button>
     <div class="or">
       <p>or</p>
@@ -23,22 +23,22 @@
           <form class="col s12" type="text" id="newuser" action="api/users/register" method="POST">
             <div class="row">
               <div class="input-field col s6">
-                <input placeholder="The HoneyDew Couple" name="acct_name" type="text" class="validate">
+                <input placeholder="The HoneyDew Couple" id="newuser" name="acct_name" type="text" class="validate">
                 <label for="couple-name">Couple Name</label>
               </div>
               <div class="input-field col s6">
-                <input placeholder="HoneyDew" name="secret_word" type="text" class="validate">
+                <input placeholder="HoneyDew" id="newuser" name="secret_word" type="text" class="validate">
                 <label for="first_name">Secret Word</label>
               </div>
               <div class="input-field col s6">
-                <input placeholder="Blake Lively" name="userone_name" type="text" class="validate">
+                <input placeholder="Blake Lively" id="newuser" name="userone_name" type="text" class="validate">
                 <label for="first_name">Your Name</label>
               </div>
               <div class="input-field col s6">
-                <input placeholder="Ryan Reynolds" name="usertwo_name" type="text" class="validate">
+                <input placeholder="Ryan Reynolds" id="newuser" name="usertwo_name" type="text" class="validate">
                 <label for="last_name">Your Better Half</label>
               </div>
-              <button type="submit" form="newuser"
+              <button type="submit" id= "newUserBtn" form="newuser"
                 class="modal-action modal-close waves-effect waves-purple btn-flat">Submit</button>
             </div>
           </form>
@@ -76,11 +76,11 @@
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
         </div>
       </div>
+   
+    </div></div>
     </div>
-    <br><br>
 
+  </div><br><br><br>
   </div>
-  </div>
-
 
 </main>
