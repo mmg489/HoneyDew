@@ -26,8 +26,12 @@
         <div class="swiper-wrapper">
             {{#each activities_data}}
             <div class="swiper-slide unliked" value={{this.id}}>
-                <img src="{{meal_img}}" alt="" class="img_slide" width="200px" height="200px">
-                <h4 class="idea">{{event_name}}</h4>
+                <div class="row">
+                <img src="{{event_img}}" alt="" class="img_slide" width="200px" height="200px">
+                </div>
+                <div class="row">
+                <h6 class="idea center-align">{{event_name}}</h6>
+                </div>
             </div>
             {{/each}}
         </div>
