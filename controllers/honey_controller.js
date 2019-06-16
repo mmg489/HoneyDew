@@ -109,15 +109,9 @@ router.get('/api/foods/both:uniqueurl', function (req, res) {
 
 // creates new user
 router.post('/api/users/register', function (req, res) {
-    newUser = {
-        "uniqueurl": "UUID()",
-        "acct_name": req.body.acct_name.split(' ').join('_'),
-        "couple_name": req.body.acct_name,
-        "secret_word": req.body.secret_word,
-        "userone_name": req.body.userone_name,
-        "usertwo_name": req.body.usertwo_name
-    };
-    users.new(function (result) {
+    newUser = `'${req.body.acct_name.split(' ').join('_')}', '${req.body.acct_name}', '${req.body.secret_word}', '${req.body.userone_name}', '${req.body.usertwo_name}'`;
+
+    users.new(newUser, function (result) {
         console.log(result);
         res.sendStatus(200);
     })
@@ -130,6 +124,7 @@ router.post('/auth', function (req, res) {
     var secret_word = req.body.secretword;
     if (acct_name && secret_word) {
         users.login(acct_name, secret_word, function (results) {
+            console.log(results);
             if (results.length > 0) {
                 req.session.loggedin = true;
                 req.session.username = acct_name;
@@ -146,7 +141,7 @@ router.post('/auth', function (req, res) {
 });
 
 router.get('/dashboard/:uniqueurl/', function (req, res) {
-    // var username = req.params.username;
+    console.log(res);
     users.data(req.params.uniqueurl, function (data) {
         res.render('userselection', { user_data: data });
     })

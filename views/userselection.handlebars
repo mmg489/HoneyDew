@@ -1,15 +1,15 @@
 <main>
-    {{#each user_data}}
     <div id="userselection" class="modal">
         <div class="modal-content">
             <div class="row">
                 <h2>Who are you?</h2>
                 <form action="dashboard/:uniqueurl/:username" method="POST">
+                    {{#each user_data}}
                     <a href="/dashboard/{{this.uniqueurl}}/{{this.userone_name}}">{{this.userone_name}}</a> or <a
                         href="/dashboard/{{this.uniqueurl}}/{{this.usertwo_name}}">{{this.usertwo_name}}</a>
+                    {{/each}}
                 </form>
             </div>
         </div>
     </div>
-    {{/each}}
 </main>
