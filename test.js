@@ -14,13 +14,44 @@ chai.use(chaiHttp);
 describe('/GET foods', function() {
     it('it should GET all the foods', function(done) {
         chai.request(server)
-            .get('/api/foods/like')
+            .get('/api/foods/like/:uniqueurl')
             .end(function (err, res) {
                 res.should.have.status(200);
                 done();
             });
     });
 });
+
+describe('/PUT/:id foods', () => {
+    it('it should UPDATE a food given the id', (done) => {
+        let food = {id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
+        foods.update(food.id, (err, res) => {
+            chai.request(server)
+            .put('/api/foods/liked/' + food.id)
+            .send({id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
+            .end((err, res) => {
+                res.should.have.status(200);
+            done();
+            });
+        });
+    });
+});
+
+describe('/PUT/:id foods', () => {
+    it('it should UPDATE a food given the id', (done) => {
+        let food = {id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
+        foods.update(food.id, (err, res) => {
+            chai.request(server)
+            .put('/api/foods/undo/' + food.id)
+            .send({id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
+            .end((err, res) => {
+                res.should.have.status(200);
+            done();
+            });
+        });
+    });
+});
+
 
 
 

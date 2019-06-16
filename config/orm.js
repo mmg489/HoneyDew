@@ -58,16 +58,18 @@ var orm = {
             cb(result);
         });
     },
-
-    create: function (table, object, cb) {
+    insert: function (table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
 
-        queryString += " SET ?";
-
+        queryString += " (";
+        queryString += cols.toString();
+        queryString += ") VALUES (";
+        queryString += vals;
+        queryString += ")";
 
         console.log(queryString);
 
-        connection.query(queryString, object, function (err, result) {
+        connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
