@@ -61,7 +61,7 @@ VALUES
     ('Chicken Tikka Masala','https://cafedelites.com/wp-content/uploads/2018/04/Best-Chicken-Tikka-Masala-IMAGE-2.jpg'),
     ('Samosas','https://www.africanbites.com/wp-content/uploads/2018/10/IMG_9223.jpg'),
     ('Butter Chicken','https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-64.jpg'),
-    ('Chickpea Curry','Chttps://yupitsvegan.com/wp-content/uploads/2017/11/coconut-chickpea-curry-vegan-square-12.jpg'),
+    ('Chickpea Curry','https://yupitsvegan.com/wp-content/uploads/2017/11/coconut-chickpea-curry-vegan-square-12.jpg'),
     ('Keema Aloo','https://www.tashasartisanfoods.com/blog/wp-content/uploads/2018/07/Keema-Aloo-Curry-2.jpg'),
     ('Chicken Shawarma','https://www.recipetineats.com/wp-content/uploads/2014/12/Chicken-Shawarma_5.jpg'),
     ('Greek Chicken Souvlaki','https://media.chefdehome.com/740/0/0/chicken-souvlaki/souvlaki-chicken.jpg'),
