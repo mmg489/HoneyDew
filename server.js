@@ -21,12 +21,12 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // connects css
-app.use(express.static(__dirname + '/public')); 
+app.use(express.static(__dirname + '/public'));
 
 app.use(session({
-	secret: 'secret',
-	resave: true,
-	saveUninitialized: true
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
 }));
 
 // imports 'controller' file as router
@@ -37,6 +37,6 @@ app.use(routes);
 // starts localhost through port number
 app.listen(PORT, function() {
     console.log('Server listening on: http://localhost:' + PORT);
-})
+});
 
 module.exports = app;
