@@ -124,10 +124,12 @@ var orm = {
     find: function (table, col, val, cb) {
         var queryString = 'SELECT * FROM ' + table + ' WHERE ' + col + ' = ?';
         connection.query(queryString, val, function (err, result) {
+            console.log(queryString);
             if (err) {
                 throw err;
             }
             cb(result);
+            console.log(result);
         });
     }
 };

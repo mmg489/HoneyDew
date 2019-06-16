@@ -12,17 +12,6 @@ router.get('/', function (req, res) {
     res.render('index');
 });
 
-// the account page
-router.get('/dashboard', function (req, res) {
-    res.render('dashboard');
-});
-
-// the swiping page for shared 'liked'
-router.get('/both', function (req, res) {
-    res.render('both');
-});
-
-
 
 // ROUTES FOR FOODS
 
@@ -34,11 +23,6 @@ router.get('/api/foods/like/:uniqueurl', function (req, res) {
         console.log(data);
     });
 });
-
-// adds new food ideas
-// router.post('api/foods/add', function (req, res) {
-//     foods.create('');
-// })
 
 //updates the 'liked' column for foods
 router.put('/api/foods/like/:uniqueurl/:id', function (req, res) {
@@ -126,7 +110,6 @@ router.post('/auth', function (req, res) {
     var secret_word = req.body.secretword;
     if (acct_name && secret_word) {
         users.login(acct_name, secret_word, function (results) {
-            console.log(results);
             if (results.length > 0) {
                 req.session.loggedin = true;
                 req.session.username = acct_name;
@@ -143,8 +126,8 @@ router.post('/auth', function (req, res) {
 });
 
 router.get('/dashboard/:uniqueurl/', function (req, res) {
-    console.log(res);
     users.data(req.params.uniqueurl, function (data) {
+        console.log('data: ' + data);
         res.render('userselection', { user_data: data });
     });
 });
@@ -152,6 +135,7 @@ router.get('/dashboard/:uniqueurl/', function (req, res) {
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     // var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
+        console.log('data: ' + data)
         res.render('dashboard', { user_data: data });
     });
 });

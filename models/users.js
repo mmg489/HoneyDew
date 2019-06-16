@@ -14,7 +14,7 @@ var users = {
         orm.insert(table, col, vals, cb);
     },
     data: function (uniqueurl, cb) {
-        orm.find('users', 'uniqueurl', "`" + uniqueurl + "'", function (res) {
+        orm.find('users', 'uniqueurl', uniqueurl, function (res) {
             cb(res);
         })
     }
