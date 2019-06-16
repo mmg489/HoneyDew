@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS honeydew_db;
-CREATE DATABASE honeydew_db;
-USE honeydew_db;
+DROP DATABASE IF EXISTS honeydew;
+CREATE DATABASE honeydew;
+USE honeydew;
 
 CREATE TABLE users (
     id int NOT NULL AUTO_INCREMENT,
