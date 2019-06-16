@@ -18,14 +18,14 @@ VALUES
     ('Take a Foreign Language','https://www.state.gov/wp-content/uploads/2019/04/Language5_FSiStock2017.jpg'),
     ('Take a Pottery Class','https://www.whatcomtalk.com/wp-content/uploads/2015/05/jansen-art-center-pottery-date-night-600x600.jpg'),
     ('Make Dinner Together','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLPudM6k2w8FCCWLKUGJOj18LRp1ncWIBDCJJEV52BPKuzUVn'),
-    ('Visit Family/Friends','https://www.meetinggame.fr/reseau-de-loisirs/images/rencontres/couples-rencontres-amicales.jpg'),
+    ('Visit Family and/or Friends','https://www.meetinggame.fr/reseau-de-loisirs/images/rencontres/couples-rencontres-amicales.jpg'),
     ('Attend a Sporting Event','https://d2cx26qpfwuhvu.cloudfront.net/aberdeen/wp-content/uploads/2018/05/02152937/ATLUTD.jpg'),
     ('Ghost Tour','http://www.historicpensacola.org/media/historic-pensacola/images/ghosttour08.jpg'),
     ('Mini Golf','https://datenightguide.com/wp-content/uploads/2018/05/Mini-golf-couple-shoot_023.jpg'),
     ('Go to a Dive Bar','http://www.trbimg.com/img-56048b4b/turbine/redeye-best-intentions-review-20150923'),
     ('Go to the Symphony','https://i.pinimg.com/originals/85/82/6c/85826cc7aed1a2527130768d0a7bc549.jpg'),
     ('Tubing on a River','http://cdn9.dissolve.com/p/D2027_1_722/D2027_1_722_0004_600.jpg'),
-    ('Going to a Neighborhood Festival','https://spacecoast.files.wordpress.com/2015/04/maf-endless-crowd-2.jpg?w=1400&h=934'),
+    ('Neighborhood Festival','https://spacecoast.files.wordpress.com/2015/04/maf-endless-crowd-2.jpg?w=1400&h=934'),
     ('Getting a Couples Massage','https://theravenspa.com/wp-content/uploads/2017/12/shutterstock_635175203.jpg'),
     ('Watch a Childhood Favorite Movie','https://data.whicdn.com/images/314823360/original.png?t=1531919306'),
     ('Build a Fort','https://i.pinimg.com/originals/bc/d9/fd/bcd9fd88e3af2e6c9672a330e0ce9319.jpg'),
@@ -40,7 +40,7 @@ VALUES
     ('Plan a Vacation','https://images.pond5.com/young-couple-planning-vacation-trip-footage-074078931_prevstill.jpeg'),
     ('Go Swimming','https://s3.envato.com/files/201474541/preview.jpg'),
     ('Attend an Art Show','http://www.artsantafe.com/wp-content/uploads/2017/07/img_5306.jpg'),
-    ('Go to the Bookstore/Library','https://i.pinimg.com/originals/b6/bd/f5/b6bdf5a138152dbef30b9a8e21e2eed8.jpg'),
+    ('Go to a Bookstore or Library','https://i.pinimg.com/originals/b6/bd/f5/b6bdf5a138152dbef30b9a8e21e2eed8.jpg'),
     ('Go to the Zoo','https://media-cdn.tripadvisor.com/media/photo-s/0a/ef/ab/5c/couple-at-al-ain-zoo.jpg'),
     ('Go to the Aquarium','https://www.orlandodatenightguide.com/wp-content/uploads/2018/05/florida-aquarium-couple-2.jpg'),
     ('Scuba Diving', 'https://maltadiving.com/wp-content/uploads/2018/06/OW-4-600x400.jpg' );
@@ -48,7 +48,6 @@ VALUES
 INSERT INTO foods
     (meal_name, meal_img)
 VALUES
-<<<<<<< HEAD
     ('Hamburger','https://kazzit.com/custom/domain_1/image_files/2766_photo_230038.jpg'),
     ('Turkey Burger','http://www.mdrhealthycooking.com/wp-content/uploads/2013/12/TomsTurkeyBurger.jpg'),
     ('Chicken Sandwich','https://www.traderjoes.com/TJ_CMS_Content/Images/Recipe/chicken-slaw-bagel.jpg'),
@@ -62,7 +61,7 @@ VALUES
     ('Chicken Tikka Masala','https://cafedelites.com/wp-content/uploads/2018/04/Best-Chicken-Tikka-Masala-IMAGE-2.jpg'),
     ('Samosas','https://www.africanbites.com/wp-content/uploads/2018/10/IMG_9223.jpg'),
     ('Butter Chicken','https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-64.jpg'),
-    ('Chickpea Curry','Chttps://yupitsvegan.com/wp-content/uploads/2017/11/coconut-chickpea-curry-vegan-square-12.jpg'),
+    ('Chickpea Curry','https://yupitsvegan.com/wp-content/uploads/2017/11/coconut-chickpea-curry-vegan-square-12.jpg'),
     ('Keema Aloo','https://www.tashasartisanfoods.com/blog/wp-content/uploads/2018/07/Keema-Aloo-Curry-2.jpg'),
     ('Chicken Shawarma','https://www.recipetineats.com/wp-content/uploads/2014/12/Chicken-Shawarma_5.jpg'),
     ('Greek Chicken Souvlaki','https://media.chefdehome.com/740/0/0/chicken-souvlaki/souvlaki-chicken.jpg'),
@@ -91,51 +90,7 @@ VALUES
     ('Hot wings','https://www.dinneratthezoo.com/wp-content/uploads/2016/08/baked-buffalo-wings-11.jpg'),
     ('Lasagna','https://www.thewholesomedish.com/wp-content/uploads/2018/07/Best-Lasagna-550.jpg'),
     ('One of your favorite childhood meals','https://www.alisonspantry.com/uploads/new-products/1258.jpg');
-=======
-    ('Hamburger','https://i.imgur.com/qFYDEhxb.jpg'),
-    ('Turkey Burger','https://i.imgur.com/bx4wzSrb.jpg'),
-    ('Chicken Sandwich','Chicken-Sandwich'),
-    ('Chicken Strips','Chicken-Strips'),
-    ('Hot Dog','Hot-Dog'),
-    ('Taco','Taco'),
-    ('Burrito','Burrito'),
-    ('Beef Empanada','Beef-Empanada'),
-    ('Chile Relleno','Chile-Relleno'),
-    ('Chips and Salsa','Chips-and-Salsa'),
-    ('Chicken Tikka Masala','Chicken-Tikka-Masala'),
-    ('Samosas','Samosas'),
-    ('Butter Chicken','Butter-Chicken'),
-    ('Chickpea Curry','Chickpea-Curry'),
-    ('Keema Aloo','Keema-Aloo'),
-    ('Chicken Shawarma','Chicken-Shawarma'),
-    ('Greek Chicken Souvlaki','Greek-Chicken-Souvlaki'),
-    ('Greek Roasted Potatoes','Greek-Roasted-Potatoes'),
-    ('Greek Salad','Greek-Salad'),
-    ('Humus','Humus'),
-    ('Jerk Chicken','Jerk-Chicken'),
-    ('Ackee and Saltfish','Ackee-and-Saltfish'),
-    ('Red Pea Soup','Red-Pea-Soup'),
-    ('Brown Stew Chicken','Brown-Stew-Chicken'),
-    ('Cornmeal Porridge','Cornmeal-Porridge'),
-    ('Shrimp Etouffee','Shrimp-Etouffee'),
-    ('Jambalaya','Jambalaya'),
-    ('Gumbo','Gumbo'),
-    ('Shrimp and Grits','Shrimp-and-Grits'),
-    ('Blackened Catfish','Blackened-Catfish'),
-    ('Tortellini Soup','Tortellini-Soup'),
-    ('Baked Ziti with Sausage','Baked-Ziti-with-Sausage'),
-    ('Gnocchi with Tomato Sauce and Mozzarella','Gnocchi-with-Tomato-Sauce-and-Mozzarella'),
-    ('Baked Eggplant with Parmesan','Baked-Eggplant-with-Parmesan'),
-    ('Beefy Baked Ravioli','Beefy-Baked-Ravioli'),
-    ('Funnel Cake','Funnel-Cake'),
-    ('Beignets','Beignets'),
-    ('Taco Bell','Taco-Bell'),
-    ('Homemade pizza','Homemade-pizza'),
-    ('Hot wings','Hot-wings'),
-    ('Lasagna','Lasagna'),
-    ('One of your favorite childhood meals','One-of-your-favorite-childhood-meals');
->>>>>>> ef991ece565f157d30267ffc4b50ff1556b48935
-
+    
 
 INSERT INTO users
     (uniqueurl, acct_name, couple_name, secret_word, userone_name, usertwo_name)
