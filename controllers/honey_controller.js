@@ -12,17 +12,6 @@ router.get('/', function (req, res) {
     res.render('index');
 });
 
-// the account page
-router.get('/dashboard', function (req, res) {
-    res.render('dashboard');
-});
-
-// the swiping page for shared 'liked'
-router.get('/both', function (req, res) {
-    res.render('both');
-});
-
-
 
 // ROUTES FOR FOODS
 
@@ -34,11 +23,6 @@ router.get('/api/foods/like/:uniqueurl', function (req, res) {
         console.log(data);
     });
 });
-
-// adds new food ideas
-// router.post('api/foods/add', function (req, res) {
-//     foods.create('');
-// })
 
 //updates the 'liked' column for foods
 router.put('/api/foods/like/:uniqueurl/:id', function (req, res) {
@@ -111,15 +95,9 @@ router.get('/api/foods/both:uniqueurl', function (req, res) {
 
 // creates new user
 router.post('/api/users/register', function (req, res) {
-    newUser = {
-        'uniqueurl': 'UUID()',
-        'acct_name': req.body.acct_name.split(' ').join('_'),
-        'couple_name': req.body.acct_name,
-        'secret_word': req.body.secret_word,
-        'userone_name': req.body.userone_name,
-        'usertwo_name': req.body.usertwo_name
-    };
-    users.new(function (result) {
+    newUser = `'${req.body.acct_name.split(' ').join('_')}', '${req.body.acct_name}', '${req.body.secret_word}', '${req.body.userone_name}', '${req.body.usertwo_name}'`;
+
+    users.new(newUser, function (result) {
         console.log(result);
         res.sendStatus(200);
     });
@@ -148,8 +126,8 @@ router.post('/auth', function (req, res) {
 });
 
 router.get('/dashboard/:uniqueurl/', function (req, res) {
-    // var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
+        console.log('data: ' + data);
         res.render('userselection', { user_data: data });
     });
 });
@@ -157,6 +135,7 @@ router.get('/dashboard/:uniqueurl/', function (req, res) {
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     // var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
+        console.log('data: ' + data)
         res.render('dashboard', { user_data: data });
     });
 });

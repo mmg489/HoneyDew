@@ -46,12 +46,12 @@ var orm = {
         queryString += " (";
         queryString += cols.toString();
         queryString += ") VALUES (";
-        queryString += printQuestionMarks(vals.length);
+        queryString += vals;
         queryString += ") ";
 
         console.log(queryString);
 
-        connection.query(queryString, vals, function (err, result) {
+        connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
@@ -124,10 +124,12 @@ var orm = {
     find: function (table, col, val, cb) {
         var queryString = 'SELECT * FROM ' + table + ' WHERE ' + col + ' = ?';
         connection.query(queryString, val, function (err, result) {
+            console.log(queryString);
             if (err) {
                 throw err;
             }
             cb(result);
+            console.log(result);
         });
     }
 };

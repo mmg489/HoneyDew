@@ -1,8 +1,8 @@
 var orm = require("../config/orm.js");
 
 var users = {
-    new: function (cb) {
-        orm.create('users', newUser, cb);
+    new: function (newUser, cb) {
+        orm.create('users', 'acct_name, couple_name, secret_word, userone_name, usertwo_name', newUser, cb);
     },
     login: function (acct_name, secret_word, cb) {
         orm.login(acct_name, secret_word, cb);
@@ -14,7 +14,7 @@ var users = {
         orm.insert(table, col, vals, cb);
     },
     data: function (uniqueurl, cb) {
-        orm.find('users', 'uniqueurl', "`" + uniqueurl + "'", function (res) {
+        orm.find('users', 'uniqueurl', uniqueurl, function (res) {
             cb(res);
         })
     }
