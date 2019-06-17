@@ -8,18 +8,6 @@ var foods = {
       cb(res);
     });
   },
-  create: function(mealidea, cb) {
-    orm.create('foods', 'meal_name', mealidea, cb);
-  },
-  update: function(id, uuid, cb) {
-    var conditionOne = "id=" + id;
-    var conditionTwo = 'uuid=' + uuid;
-    orm.update('foods', 'swipe = swipe + 1', conditionOne, conditionTwo, cb);
-  },
-  undo: function(id, cb) {
-    var condition = "id=" + id;
-    orm.update('foods', 'swipe = swipe - 1', condition, cb);
-  },
   delete: function(id, cb) {
     var condition = "id=" + id;
     orm.delete('foods', condition, function(res) {
