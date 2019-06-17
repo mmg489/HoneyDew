@@ -81,10 +81,10 @@ var orm = {
     update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
-        queryString += " SET ";
-        queryString += objColVals;
-        queryString += " WHERE ";
-        queryString += condition;
+       queryString += " SET ";
+       queryString += objColVals;
+       queryString += " WHERE ";
+       queryString += condition;
 
         console.log(queryString);
         connection.query(queryString, function (err, result) {
