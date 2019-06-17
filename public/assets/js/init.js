@@ -18,10 +18,11 @@ $(document).ready(function () {
         if ($(this).hasClass('liked')) {
 
             var food_id = $(this).attr('value');
+            var path = window.location.href;
 
             $.ajax({
                 method: "PUT",
-                url: "/api/foods/undo/" + food_id
+                url: path + '/undo/' + food_id
             }).then(function (data) {
                 console.log(food_id + ' unliked');
             })
@@ -36,7 +37,6 @@ $(document).ready(function () {
         } else if ($(this).hasClass('unliked')) {
 
             var food_id = $(this).attr('value');
-            // var pathArray = window.location.pathname.split('/');
             var path = window.location.href;
 
             $.ajax({

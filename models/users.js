@@ -13,6 +13,9 @@ var users = {
     insert: function (table, col, vals, cb) {
         orm.insert(table, col, vals, cb);
     },
+    undo: function (table, condition, cb) {
+        orm.delete(table, condition, cb);
+      },
     data: function (uniqueurl, cb) {
         orm.find('users', 'uniqueurl', uniqueurl, function (res) {
             cb(res);
