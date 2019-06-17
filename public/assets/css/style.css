@@ -8,6 +8,7 @@ This CSS resource incorporates links to font software which is the valuable copy
 }
 .swiper-container{
     margin: 5px auto;
+    
 }
 body {
     font-family: "Honey Dew", serif;
@@ -57,10 +58,13 @@ footer.yellow.lighten-3 {
     background-color: rgb(208,233,129) !important;
     color: #F2BF27 !important;
 }
+nav{
+    background-color: rgb(208,233,129) !important;
+}
 
-nav {
-    background-color: rgb(208,233,129);
-    
+nav li ul {
+    z-index: 100%;
+    position: absolute;
 }
 ::placeholder{
     color:rgb(21, 121, 21);
