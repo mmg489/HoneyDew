@@ -135,7 +135,7 @@ router.get('/dashboard/:uniqueurl/', function (req, res) {
     });
 });
 
-// Displays users username on dashboard
+// Displays users username on dashboard with avatar
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     // var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {

@@ -28,14 +28,14 @@ describe('/GET foods', function() {
 
 
 //testing updates of liked countsfor foods
-describe('/PUT/:uniqueurl/:id foods', () => {
-    it('it should UPDATE a food like given the id', (done) => {
+describe('/PUT/:uniqueurl/:id foods', function() {
+    it('it should UPDATE a food like given the id', function(done) {
         let food = {id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
-        foods.all(food.id, food.uniqueurl, (err, res) => {
+        foods.all(food.id, food.uniqueurl, function(err, res) {
             chai.request(server)
             .put('/api/foods/like/' + food.uniqueurl + food.id)
             .send({id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
-            .end((err, res) => {
+            .end(function(err, res) {
                 res.should.have.status(200);
             done();
             });
@@ -179,7 +179,7 @@ describe('POST users', () => {
     });
 });
 
-
+// Displays users name and allows them to pick who is using it
 describe('/GET users', function() {
     it('it should GET allow the user to chose who is using it', function(done) {
         chai.request(server)
@@ -190,3 +190,17 @@ describe('/GET users', function() {
             });
     });
 });
+
+// Displays usersname with the avatars
+describe('/GET users', function() {
+    it('it should GET ', function(done) {
+        chai.request(server)
+            .get('/dashboard/:uniqueurl/:username')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+
