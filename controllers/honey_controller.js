@@ -127,6 +127,7 @@ router.post('/auth', function (req, res) {
     }
 });
 
+// Allows users to pick who is using
 router.get('/dashboard/:uniqueurl/', function (req, res) {
     users.data(req.params.uniqueurl, function (data) {
         console.log('data: ' + data);
@@ -134,6 +135,7 @@ router.get('/dashboard/:uniqueurl/', function (req, res) {
     });
 });
 
+// Displays users username on dashboard
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     // var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
