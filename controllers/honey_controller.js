@@ -42,7 +42,7 @@ router.put('/api/foods/like/:uniqueurl/undo/:id', function (req, res) {
 });
 
 // shows 'liked' food ideas from both users
-router.get('/api/foods/both:uniqueurl', function (req, res) {
+router.get('/api/foods/both/:uniqueurl', function (req, res) {
     foods.both(req.params.uniqueurl, function (data) {
         console.log(data);
         res.render('both-foods', { foods_data: data });
