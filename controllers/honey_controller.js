@@ -67,16 +67,18 @@ router.get('/api/activities/like/:uniqueurl', function (req, res) {
 // });
 
 // Updates the 'like' count for activity ideas
-router.put('/api/activities/liked/:uniqueurl/:id', function (req, res) {
-    activities.create(req.params.id, function (result) {
-        console.log(result);
+router.put('/api/activities/like/:uniqueurl/:id', function (req, res) {
+    var uniqueurl = req.params.uniqueurl;
+    users.insert('user_likes', 'uniqueurl, liked_activities', '"' + uniqueurl + '", ' + req.params.id, function (result) {
+        // console.log(result);
         res.sendStatus(200);
     });
 });
 
-// undo 'like'
-router.put('/api/activities/undo/:id', function (req, res) {
-    activities.undo(req.params.id, function (result) {
+// undo 'liked'
+router.put('/api/activities/like/:uniqueurl/undo/:id', function (req, res) {
+    var uniqueurl = req.params.uniqueurl;
+    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_activities = ' + req.params.id + ' LIMIT 1', function (result) {
         console.log(result);
         res.sendStatus(200);
     });
