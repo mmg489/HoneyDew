@@ -28,24 +28,23 @@ describe('/GET foods', function() {
 
 
 //testing updates of liked countsfor foods
-// describe('/PUT/:id foods', () => {
-//     it('it should UPDATE a food like given the id', (done) => {
-//         let food = {id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
-//         let user = {uniqueurl: " "}
-//         foods.update(food.id, user.uniqueurl, (err, res) => {
-//             chai.request(server)
-//             .put('/api/foods/like/:uniqueurl/' + food.id + user.uniqueurl)
-//             .send({id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
-//             .end((err, res) => {
-//                 res.should.have.status(200);
-//             done();
-//             });
-//         });
-//     });
-// });
+describe('/PUT/:uniqueurl/:id foods', () => {
+    it('it should UPDATE a food like given the id', (done) => {
+        let food = {id: 500, uniqueurl: "something", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
+        foods.update(food.id, food.uniqueurl, (err, res) => {
+            chai.request(server)
+            .put('/api/foods/like/' + food.uniqueurl + food.id)
+            .send({id: 500, uniqueurl: "something", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
+            .end((err, res) => {
+                res.should.have.status(200);
+            done();
+            });
+        });
+    });
+});
 
 // // testing for undoing likes on foods
-// describe('/PUT/:id foods', () => {
+// describe('/PUT/:id foods', () => {cd
 //     it('it should UPDATE a food unlike given the id', (done) => {
 //         let food = {id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
 //         foods.update(food.id, (err, res) => {
@@ -75,11 +74,11 @@ describe('/GET foods', function() {
 
 // //ACTIVITIES
 
-// //pulls all of the activities
+//pulls all of the activities
 // describe('/GET activities', function() {
 //     it('it should GET all activities', function(done) {
 //         chai.request(server)
-//             .get('/api/activities/like/:uniqueurl')
+//             .get('/api/activities/like/')
 //             .end(function (err, res) {
 //                 res.should.have.status(200);
 //                 done();

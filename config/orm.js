@@ -78,13 +78,15 @@ var orm = {
     },
 
     // updates/changes a value for an item in the table
-    update: function (table, objColVals, condition, cb) {
+    update: function (table, objColVals, conditionOne, conditionTwo, cb) {
         var queryString = "UPDATE " + table;
 
-        queryString += " SET ";
-        queryString += objColVals;
-        queryString += " WHERE ";
-        queryString += condition;
+        queryString += `SET ${objColVals} WHERE ${conditionOne} AND ${conditionTwo};`
+        
+       // queryString += " SET ";
+       // queryString += objColVals;
+       // queryString += " WHERE ";
+       // queryString += condition;
 
         console.log(queryString);
         connection.query(queryString, function (err, result) {
