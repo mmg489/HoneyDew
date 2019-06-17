@@ -19,31 +19,31 @@ router.get('/', function (req, res) {
 router.get('/api/foods/like/:uniqueurl', function (req, res) {
     foods.all(req.params.uniqueurl, function (data) {
         res.render('swipe-foods', { foods_data: data });
-
-        console.log(data);
     });
 });
 
 //updates the 'liked' column for foods
 router.put('/api/foods/like/:uniqueurl/:id', function (req, res) {
     var uniqueurl = req.params.uniqueurl;
-    users.insert('user_likes', 'uniqueurl, liked_foods, ', uniqueurl + ', ' + req.params.id, function (result) {
-        console.log(result);
+    users.insert('user_likes', 'uniqueurl, liked_foods', '"' + uniqueurl + '", ' + req.params.id, function (result) {
+        // console.log(result);
         res.sendStatus(200);
     });
 });
 
+
 // undo 'liked'
-router.put('/api/foods/undo/:id', function (req, res) {
-    foods.undo(req.params.id, function (result) {
+router.put('/api/foods/like/:uniqueurl/undo/:id', function (req, res) {
+    var uniqueurl = req.params.uniqueurl;
+    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_foods = ' + req.params.id + ' LIMIT 1', function (result) {
         console.log(result);
         res.sendStatus(200);
     });
 });
 
 // shows 'liked' food ideas from both users
-router.get('/api/foods/both:uniqueurl', function (req, res) {
-    foods.both(req.params.uniqueurl,function (data) {
+router.get('/api/foods/both/:uniqueurl', function (req, res) {
+    foods.both(req.params.uniqueurl, function (data) {
         console.log(data);
         res.render('both-foods', { foods_data: data });
     });
@@ -143,14 +143,14 @@ router.get('/dashboard/:uniqueurl/:username', function (req, res) {
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
-        res.render('both_foods', { meal_img:'https://i.pinimg.com/originals/03/c4/15/03c415e3dc2ca9fdac2c1e747dde4696.jpg'});
+        res.render('both_foods', { meal_img: 'https://i.pinimg.com/originals/03/c4/15/03c415e3dc2ca9fdac2c1e747dde4696.jpg' });
     })
 });
 
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
-        res.render('both_activities', { event_img:'https://www.highlandvillage.org/ImageRepository/Document?documentID=5524'});
+        res.render('both_activities', { event_img: 'https://www.highlandvillage.org/ImageRepository/Document?documentID=5524' });
     })
 });
 // exports express router
