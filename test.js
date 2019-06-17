@@ -179,3 +179,14 @@ describe('POST users', () => {
     });
 });
 
+
+describe('/GET users', function() {
+    it('it should GET allow the user to chose who is using it', function(done) {
+        chai.request(server)
+            .get('/dashboard/:uniqueurl/')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
