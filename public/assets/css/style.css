@@ -7,7 +7,9 @@ This CSS resource incorporates links to font software which is the valuable copy
     src: url("../Fonts/HoneyDew.eot") format("eot"), url("../Fonts/HoneyDew.woff") format("woff"), url("../Fonts/HoneyDew.woff2") format("woff2"), url("../Fonts/HoneyDew.ttf") format("ttf");
 }
 .swiper-container{
-    margin: 5px auto;
+    margin: auto;
+    margin-top: 62px;
+    
 }
 body {
     font-family: "Honey Dew", serif;
@@ -57,10 +59,14 @@ footer.yellow.lighten-3 {
     background-color: rgb(208,233,129) !important;
     color: #F2BF27 !important;
 }
+nav{
+    background-color: rgb(208,233,129) !important;
+    position: absolute;
+}
 
-nav {
-    background-color: rgb(208,233,129);
-    
+nav li ul {
+    z-index: 100%;
+    position: absolute;
 }
 ::placeholder{
     color:rgb(21, 121, 21);
@@ -140,6 +146,8 @@ nav {
 .dropdown-trigger {
     margin-right: 30px;
     margin-top: 5px;
+ 
+ 
 }
 
 #card {
@@ -170,6 +178,8 @@ nav ul a {
     width:90vw;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 90px;
+    margin-bottom: 60px;
 }
 
 .idea {
@@ -187,4 +197,11 @@ nav ul a {
 
 .row .col.l1 {
     width:15%;
+}
+
+.container{
+    margin-top: 50px;
+}
+.footer{
+    margin-top:0px;
 }

@@ -95,7 +95,7 @@ VALUES
 INSERT INTO users
     (uniqueurl, acct_name, couple_name, secret_word, userone_name, usertwo_name)
 VALUES
-    (uuid(), 'test_couple', 'test couple', 'password', 'John', 'Jane'); 
+    (uuid(), 'test_couple', 'test couple', 'password', 'Jane', 'John'); 
 
 
 
