@@ -60,16 +60,16 @@ describe('/GET foods', function() {
 // });
 
 // // shows liked idea from both users
-// describe('/GET foods', function() {
-//     it('it should GET all foods liked from both users', function(done) {
-//         chai.request(server)
-//             .get('/api/foods/both:uniqueurl')
-//             .end(function (err, res) {
-//                 res.should.have.status(200);
-//                 done();
-//             });
-//     });
-// });
+describe('/GET foods', function() {
+    it('it should GET all foods liked from both users', function(done) {
+        chai.request(server)
+            .get('/api/foods/both/:uniqueurl')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
 
 
 // //ACTIVITIES
@@ -119,16 +119,16 @@ describe('/GET activities', function() {
 // });
 
 // //show liked from both users
-// describe('/GET activities', function() {
-//     it('it should GET all liked activities from both users', function(done) {
-//         chai.request(server)
-//             .get('/api/foods/both:uniqueurl')
-//             .end(function (err, res) {
-//                 res.should.have.status(200);
-//                 done();
-//             });
-//     });
-// });
+describe('/GET activities', function() {
+    it('it should GET all liked activities from both users', function(done) {
+        chai.request(server)
+            .get('/api/activities/both/:uniqueurl')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
 
 
 

@@ -8,13 +8,6 @@ var foods = {
       cb(res);
     });
   },
-<<<<<<< HEAD
-  //create: function(mealidea, cb) {
-  //  orm.create('foods', 'meal_name', mealidea, cb);
-  //},
-
-  delete: function(id, cb) {
-=======
   create: function (mealidea, cb) {
     orm.create('foods', 'meal_name', mealidea, cb);
   },
@@ -32,7 +25,6 @@ var foods = {
     });
   },
   delete: function (id, cb) {
->>>>>>> ee2e05fcbfcb7b64bc341815bb72c5e10f3092ea
     var condition = "id=" + id;
     orm.delete('foods', condition, function (res) {
       cb(res);
