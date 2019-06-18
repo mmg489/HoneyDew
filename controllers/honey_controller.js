@@ -15,17 +15,17 @@ router.get('/', function (req, res) {
 
 // ROUTES FOR FOODS
 
-// inital swiping and likeing
+// inital swiping and liking
 router.get('/api/foods/like/:uniqueurl', function (req, res) {
     foods.all(req.params.uniqueurl, function (data) {
         res.render('swipe-foods', { foods_data: data });
     });
 });
 
-//updates the 'liked' column for foods
-router.put('/api/foods/like/:uniqueurl/:id', function (req, res) {
+// updates the 'liked' column for foods
+router.put('/api/foods/like/:uniqueurl/:mealname', function (req, res) {
     var uniqueurl = req.params.uniqueurl;
-    users.insert('user_likes', 'uniqueurl, liked_foods', '"' + uniqueurl + '", ' + req.params.id, function (result) {
+    users.insert('user_likes', 'uniqueurl, liked_foods', '"' + uniqueurl + '", "' + req.params.mealname + '"', function (result) {
         // console.log(result);
         res.sendStatus(200);
     });
@@ -33,9 +33,9 @@ router.put('/api/foods/like/:uniqueurl/:id', function (req, res) {
 
 
 // undo 'liked'
-router.put('/api/foods/like/:uniqueurl/undo/:id', function (req, res) {
+router.put('/api/foods/like/:uniqueurl/undo/:mealname', function (req, res) {
     var uniqueurl = req.params.uniqueurl;
-    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_foods = ' + req.params.id + ' LIMIT 1', function (result) {
+    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_foods = ' + req.params.mealname + ' LIMIT 1', function (result) {
         console.log(result);
         res.sendStatus(200);
     });
@@ -43,9 +43,9 @@ router.put('/api/foods/like/:uniqueurl/undo/:id', function (req, res) {
 
 // shows 'liked' food ideas from both users
 router.get('/api/foods/both/:uniqueurl', function (req, res) {
-    foods.both(req.params.uniqueurl, function (data) {
+    foods.both('liked_foods', req.params.uniqueurl, function (data) {
+        res.render('both_foods', { foods_data: data });
         console.log(data);
-        res.render('both-foods', { foods_data: data });
     });
 });
 
@@ -85,7 +85,7 @@ router.put('/api/activities/like/:uniqueurl/undo/:id', function (req, res) {
 });
 
 // show 'liked ideas from both users
-router.get('/api/foods/both:uniqueurl', function (req, res) {
+router.get('/api/foods/both/:uniqueurl', function (req, res) {
     activities.both(req.params.uniqueurl, function (data) {
         console.log(data);
         res.render('both-activities', { activites_data: data });
@@ -101,7 +101,7 @@ router.post('/api/users/register', function (req, res) {
 
     users.new(newUser, function (result) {
         console.log(result);
-        res.sendStatus(200);
+        res.redirect('/');
     });
 });
 
