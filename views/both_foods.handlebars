@@ -8,7 +8,8 @@
                         class="large material-icons">insert_menu</i></a></li>
 
             <!-- Dropdown Structure -->
-            <ul id="dropdown4" class="dropdown-content swipe-nav">
+            <ul id="dropdown4" class="dropdown-content">
+          
                 <li class="divider"></li>
                 <li><a href="/">Sign Out</a></li>
             </ul>
@@ -24,7 +25,7 @@
             {{#each foods_data}}
             <div class="swiper-slide unliked" value={{this.id}}>
                  <img src="{{meal_img}}" alt="" class="img_slide" width="200px" height="200px">
-                  <h4 class="idea">{{meal_name}}</h4>
+                  <h4 class="idea">{{liked_foods}}</h4>
                
             </div>
             {{/each}}

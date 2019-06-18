@@ -18,7 +18,7 @@ var connection;
          port: 3306,
          user: process.env.DB_USER,
          password: process.env.DB_PASS,
-         database: 'honeydew_db'
+         database: 'honeydew'
      })
  };
 connection.connect(function (err) {

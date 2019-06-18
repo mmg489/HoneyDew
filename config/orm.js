@@ -81,10 +81,10 @@ var orm = {
     update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
-        queryString += " SET ";
-        queryString += objColVals;
-        queryString += " WHERE ";
-        queryString += condition;
+       queryString += " SET ";
+       queryString += objColVals;
+       queryString += " WHERE ";
+       queryString += condition;
 
         console.log(queryString);
         connection.query(queryString, function (err, result) {
@@ -131,6 +131,20 @@ var orm = {
             cb(result);
             console.log(result);
         });
+    },
+    both: function (table, col, uniqueurl, cb) {
+        var queryString = 'SELECT * from (SELECT *, COUNT(*) c FROM ';
+        queryString += table + ' GROUP BY ' + col;
+        queryString += ' HAVING c > 1) x WHERE uniqueurl = "';
+        queryString += uniqueurl + '"';
+
+        connection.query(queryString, function (err, result) {
+            console.log(queryString);
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        })
     }
 };
 

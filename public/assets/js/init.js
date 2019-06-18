@@ -25,14 +25,14 @@ var uniqueurl = path[6];
 
         if ($(this).hasClass('liked')) {
 
-            var food_id = $(this).attr('value');
+            var mealname = $(this).last().text().trim();
             var path = window.location.href;
 
             $.ajax({
                 method: "PUT",
-                url: path + '/undo/' + food_id
+                url: path + '/undo/' + mealname
             }).then(function (data) {
-                console.log(food_id + ' unliked');
+                console.log(mealname + ' unliked');
             })
 
             $(this).toggleClass('liked unliked');
@@ -44,15 +44,16 @@ var uniqueurl = path[6];
 
         } else if ($(this).hasClass('unliked')) {
 
-            var food_id = $(this).attr('value');
+            var mealname = $(this).last().text().trim();
+            console.log(mealname);
             var path = window.location.href;
 
 
             $.ajax({
                 method: "PUT",
-                url: path + '/' + food_id
+                url: path + '/' + mealname
             }).then(function (data) {
-                console.log(food_id + ' liked');
+                console.log(mealname + ' liked');
             })
 
             $(this).toggleClass('liked unliked');

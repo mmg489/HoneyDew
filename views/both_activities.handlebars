@@ -8,7 +8,12 @@
                         class="large material-icons">insert_menu</i></a></li>
 
             <!-- Dropdown Structure -->
+<<<<<<< HEAD
             <ul id="dropdown4" class="dropdown-content swipe-nav">
+=======
+            <ul id="dropdown4" class="dropdown-content">
+          
+>>>>>>> ee2e05fcbfcb7b64bc341815bb72c5e10f3092ea
                 <li class="divider"></li>
                 <li><a href="/">Sign Out</a></li>
             </ul>
@@ -19,12 +24,13 @@
     <div class="swipe-page col s12 m6">
 
     <div class="swiper-container" id="both_swiper">
-        <p class="swipe-header center">Date Ideas:</p>
+        <p class="swiper-header center">Food Ideas:</p>
         <div class="swiper-wrapper">
-            {{#each activites_data}}
+            {{#each activities_data}}
             <div class="swiper-slide unliked" value={{this.id}}>
-                <img src="{{event_img}}" alt="">
-                <h4 class="idea" val={{event_name}}>{{event_name}}</h4>
+                 <img src="{{meal_img}}" alt="" class="img_slide" width="200px" height="200px">
+                  <h4 class="idea">{{liked_activities}}</h4>
+               
             </div>
             {{/each}}
         </div>
