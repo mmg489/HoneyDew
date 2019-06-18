@@ -9,6 +9,14 @@ $(document).ready(function () {
 
     $('.dropdown-trigger').dropdown();
 
+    
+
+var path = window.location.href.split('/');
+var uniqueurl = path[6];
+    console.log('full path: ' + path + 'uniqueurl: ' + uniqueurl);
+
+    $('.swipe-nav').prepend('<li><a href="/dashboard/' + uniqueurl + '">Home</a></li>')
+
 
     var mySwiper = new Swiper('.swiper-container');
 
@@ -38,6 +46,7 @@ $(document).ready(function () {
 
             var food_id = $(this).attr('value');
             var path = window.location.href;
+
 
             $.ajax({
                 method: "PUT",

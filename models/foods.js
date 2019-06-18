@@ -8,17 +8,10 @@ var foods = {
       cb(res);
     });
   },
-  create: function(mealidea, cb) {
-    orm.create('foods', 'meal_name', mealidea, cb);
-  },
-  update: function(id, cb) {
-    var condition = "id=" + id;
-    orm.update('foods', 'swipe = swipe + 1', condition, cb);
-  },
-  undo: function(id, cb) {
-    var condition = "id=" + id;
-    orm.update('foods', 'swipe = swipe - 1', condition, cb);
-  },
+  //create: function(mealidea, cb) {
+  //  orm.create('foods', 'meal_name', mealidea, cb);
+  //},
+
   delete: function(id, cb) {
     var condition = "id=" + id;
     orm.delete('foods', condition, function(res) {

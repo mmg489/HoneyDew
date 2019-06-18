@@ -7,7 +7,8 @@ This CSS resource incorporates links to font software which is the valuable copy
     src: url("../Fonts/HoneyDew.eot") format("eot"), url("../Fonts/HoneyDew.woff") format("woff"), url("../Fonts/HoneyDew.woff2") format("woff2"), url("../Fonts/HoneyDew.ttf") format("ttf");
 }
 .swiper-container{
-    margin: 5px auto;
+    margin: auto;
+    margin-top: 62px;
     
 }
 body {
@@ -60,6 +61,7 @@ footer.yellow.lighten-3 {
 }
 nav{
     background-color: rgb(208,233,129) !important;
+    position: absolute;
 }
 
 nav li ul {
@@ -176,6 +178,8 @@ nav ul a {
     width:90vw;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 90px;
+    margin-bottom: 60px;
 }
 
 .idea {
@@ -193,4 +197,11 @@ nav ul a {
 
 .row .col.l1 {
     width:15%;
+}
+
+.container{
+    margin-top: 50px;
+}
+.footer{
+    margin-top:0px;
 }

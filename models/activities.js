@@ -8,17 +8,10 @@ var activities = {
       cb(res);
     });
   },
-  create: function(mealidea, cb) {
-    orm.create('activities', 'event_name', mealidea, cb);
-  },
-  update: function(id, cb) {
-    var condition = "id=" + id;
-    orm.update('activities', 'swipe = swipe + 1', condition, cb);
-  },
-  undo: function(id, cb) {
-    var condition = "id=" + id;
-    orm.update('activities', 'swipe = swipe - 1', condition, cb);
-  },
+ // create: function(mealidea, cb) {
+ //   orm.create('activities', 'event_name', mealidea, cb);
+ // },
+
   delete: function(id, cb) {
     var condition = "id=" + id;
     orm.delete('activities', condition, function(res) {

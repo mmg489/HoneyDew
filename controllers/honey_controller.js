@@ -101,7 +101,7 @@ router.post('/api/users/register', function (req, res) {
 
     users.new(newUser, function (result) {
         console.log(result);
-        res.sendStatus(200);
+        res.redirect('/');
     });
 });
 
