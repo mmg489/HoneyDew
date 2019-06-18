@@ -8,10 +8,6 @@ var foods = {
       cb(res);
     });
   },
-  create: function (mealidea, cb) {
-    orm.create('foods', 'meal_name', mealidea, cb);
-  },
-
   both: function (col, uniqueurl, cb) {
     orm.both('user_likes', col, uniqueurl, function (res) {
       cb(res);
