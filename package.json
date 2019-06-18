@@ -15,6 +15,9 @@
   },
   "author": "Tanya Gaviria, Margarita Munoz, Anastasia Upreti, Gabriella Tannous",
   "license": "ISC",
+  "engines": {
+    "node": "10.15.0"
+  },
   "bugs": {
     "url": "https://github.com/mmg489/HoneyDew/issues"
   },
