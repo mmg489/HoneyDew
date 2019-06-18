@@ -1,14 +1,33 @@
-<main class="swipe-page col s12 m6">
+<main>
+    <nav>
+        <div class="nav-wrapper">
 
-    <div class="swiper-container">
-        <p class="swiper-header center">Food Ideas:</p>
-        <div class="swiper-wrapper">
-            {{#each foods_data}}
-            <div class="swiper-slide unliked" value={{this.id}}>
-                <h4 class="idea">{{meal_name}}</h4>
+            <ul class="right">
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown4"><i
+                            class="large material-icons">insert_menu</i></a></li>
+
+            <!-- Dropdown Structure -->
+            <ul id="dropdown4" class="dropdown-content swipe-nav">
+                <li class="divider"></li>
+                <li><a href="/">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="swipe-page col s12 m6">
+
+        <div class="swiper-container">
+            <h3 class="swiper-header center">Food Ideas:</h3>
+            <div class="swiper-wrapper">
+                {{#each foods_data}}
+                <div class="swiper-slide unliked" value={{this.id}} idea={{meal_name}}>
+                    <img src="{{meal_img}}" alt="" class="img_slide" width="200px" height="200px">
+                    <h6 class="idea center-align">{{meal_name}}</h6>
+
+                </div>
+                {{/each}}
             </div>
-            {{/each}}
         </div>
     </div>
-    
 </main>

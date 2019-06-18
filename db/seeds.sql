@@ -1,88 +1,101 @@
-INSERT INTO activities (event_name) VALUES('Movie Night');
-INSERT INTO activities (event_name) VALUES('Netflix and Chill');
-INSERT INTO activities (event_name) VALUES('Gym Date');
-INSERT INTO activities (event_name) VALUES('Bonfire');
-INSERT INTO activities (event_name) VALUES('Hike/Park');
-INSERT INTO activities (event_name) VALUES('Concert');
-INSERT INTO activities (event_name) VALUES('Board Game Night');
-INSERT INTO activities (event_name) VALUES('Arcade/Gameing Night');
-INSERT INTO activities (event_name) VALUES( 'Shopping');
-INSERT INTO activities (event_name) VALUES( 'Bowling');
-INSERT INTO activities (event_name) VALUES( 'Taking a Scenic Drive');
-INSERT INTO activities (event_name) VALUES( 'Volunteer');
-INSERT INTO activities (event_name) VALUES( 'Take a Painting Class');
-INSERT INTO activities (event_name) VALUES( 'Take a Cooking Class');
-INSERT INTO activities (event_name) VALUES( 'Take a Foreign Language');
-INSERT INTO activities (event_name) VALUES( 'Take a Pottery Class');
-INSERT INTO activities (event_name) VALUES( 'Make Dinner Together');
-INSERT INTO activities (event_name) VALUES( 'Visit Family/Friends');
-INSERT INTO activities (event_name) VALUES( 'Attend a Sporting Event');
-INSERT INTO activities (event_name) VALUES( 'Ghost Tour');
-INSERT INTO activities (event_name) VALUES( 'Mini Golf');
-INSERT INTO activities (event_name) VALUES( 'Go to a Dive Bar');
-INSERT INTO activities (event_name) VALUES( 'Go to the Symphony');
-INSERT INTO activities (event_name) VALUES( 'Tubing on a River');
-INSERT INTO activities (event_name) VALUES( 'Going to a Neighborhood Festival');
-INSERT INTO activities (event_name) VALUES( 'Getting a Couples Massage');
-INSERT INTO activities (event_name) VALUES( 'Watch a Childhood Favorite Movie');
-INSERT INTO activities (event_name) VALUES( 'Build a Fort');
-INSERT INTO activities (event_name) VALUES( 'Go to a Local Fair');
-INSERT INTO activities (event_name) VALUES( 'Go to an Amusement Park');
-INSERT INTO activities (event_name) VALUES( 'Plant a Garden');
-INSERT INTO activities (event_name) VALUES( 'Binge Watch a TV Show');
-INSERT INTO activities (event_name) VALUES( 'Go Dancing');
-INSERT INTO activities (event_name) VALUES( 'Play Music Together');
-INSERT INTO activities (event_name) VALUES( 'Have a Cocktail Night');
-INSERT INTO activities (event_name) VALUES( 'Dress up and go for a Fancy Night Out');
-INSERT INTO activities (event_name) VALUES( 'Plan a Vacation');
-INSERT INTO activities (event_name) VALUES( 'Go Swimming');
-INSERT INTO activities (event_name) VALUES( 'Attend an Art Show');
-INSERT INTO activities (event_name) VALUES( 'Go to the Bookstore/Library');
+INSERT INTO activities
+    (uniqueurl, event_name, event_img)
+VALUES
+    (uuid(), 'Movie Night','https://moneydotcomvip.files.wordpress.com/2014/11/141118_em_movieseats1.jpg'),
+    (uuid(), 'Netflix and Chill','https://laurencecchi.com/wp-content/uploads/2017/01/netflix1-1000x700.jpg'),
+    (uuid(), 'Gym Date','https://ballnroll.com/Uploads/Blogs/LoveDating/2014GymDate/Surviving%20The%20Gym%20Date.jpg'),
+    (uuid(), 'Bonfire','https://i.pinimg.com/564x/1c/78/52/1c785215d823552f3a9fa30e9b95414e.jpg'),
+    (uuid(), 'Hike or Park','https://i.pinimg.com/564x/3b/23/40/3b2340bb07de785d5fed49882cbc1030.jpg'),
+    (uuid(), 'Concert','https://i.pinimg.com/564x/26/54/9d/26549d4b6ef4321e2dcac7affe61437e.jpg'),
+    (uuid(), 'Board Game Night','https://www.studyfinds.org/wp-content/uploads/2019/02/AdobeStock_84428602-816x520.jpeg'),
+    (uuid(), 'Arcade or Gaming Night','https://i.pinimg.com/564x/ae/85/4f/ae854fedb189edd925a5b4a5fdcd4917.jpg'),
+    (uuid(), 'Shopping','https://media.gettyimages.com/videos/couple-shopping-in-slow-motion-video-id522166598?s=640x640'),
+    (uuid(), 'Bowling','http://cdn.shopify.com/s/files/1/1141/1318/articles/bowling-date_1024x1024.jpg?v=1503370317'),
+    (uuid(), 'Taking a Scenic Drive','http://newsmobile.in/wp-content/uploads/2014/02/roadtrip.gif'),
+    (uuid(), 'Volunteer','https://www.gozaround.com/blog/wp-content/uploads/2016/02/Volunteer-Couple.jpg'),
+    (uuid(), 'Take a Painting Class','https://img.grouponcdn.com/deal/c9vxUbVoAXNssC5CozUU/WR-2048x1229/v1/c700x420.jpg'),
+    (uuid(), 'Take a Cooking Class','https://media.timeout.com/images/103939410/image.jpg'),
+    (uuid(), 'Take a Foreign Language','https://www.state.gov/wp-content/uploads/2019/04/Language5_FSiStock2017.jpg'),
+    (uuid(), 'Take a Pottery Class','https://www.whatcomtalk.com/wp-content/uploads/2015/05/jansen-art-center-pottery-date-night-600x600.jpg'),
+    (uuid(), 'Make Dinner Together','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLPudM6k2w8FCCWLKUGJOj18LRp1ncWIBDCJJEV52BPKuzUVn'),
+    (uuid(), 'Visit Family and/or Friends','https://www.meetinggame.fr/reseau-de-loisirs/images/rencontres/couples-rencontres-amicales.jpg'),
+    (uuid(), 'Attend a Sporting Event','https://d2cx26qpfwuhvu.cloudfront.net/aberdeen/wp-content/uploads/2018/05/02152937/ATLUTD.jpg'),
+    (uuid(), 'Ghost Tour','http://www.historicpensacola.org/media/historic-pensacola/images/ghosttour08.jpg'),
+    (uuid(), 'Mini Golf','https://datenightguide.com/wp-content/uploads/2018/05/Mini-golf-couple-shoot_023.jpg'),
+    (uuid(), 'Go to a Dive Bar','http://www.trbimg.com/img-56048b4b/turbine/redeye-best-intentions-review-20150923'),
+    (uuid(), 'Go to the Symphony','https://i.pinimg.com/originals/85/82/6c/85826cc7aed1a2527130768d0a7bc549.jpg'),
+    (uuid(), 'Tubing on a River','http://cdn9.dissolve.com/p/D2027_1_722/D2027_1_722_0004_600.jpg'),
+    (uuid(), 'Neighborhood Festival','https://spacecoast.files.wordpress.com/2015/04/maf-endless-crowd-2.jpg?w=1400&h=934'),
+    (uuid(), 'Getting a Couples Massage','https://theravenspa.com/wp-content/uploads/2017/12/shutterstock_635175203.jpg'),
+    (uuid(), 'Watch a Childhood Favorite Movie','https://data.whicdn.com/images/314823360/original.png?t=1531919306'),
+    (uuid(), 'Build a Fort','https://i.pinimg.com/originals/bc/d9/fd/bcd9fd88e3af2e6c9672a330e0ce9319.jpg'),
+    (uuid(), 'Go to a Local Fair','https://data.whicdn.com/images/235679294/superthumb.jpg?t=1461000398'),
+    (uuid(), 'Go to an Amusement Park','https://s3.amazonaws.com/ttweddings/Williamsburg+Sessions/busch-gardens-williamsburg-sweetheart-session-09.jpg'),
+    (uuid(), 'Plant a Garden','https://s3.envato.com/files/244495372/preview.jpg'),
+    (uuid(), 'Binge Watch a TV Show','https://joshmitch.com/wp-content/uploads/2017/08/bingewatch.jpg'),
+    (uuid(), 'Go Dancing','https://media.tenor.com/images/462611fa1c5be03400835de24d059c68/tenor.png'),
+    (uuid(), 'Play Music Together','https://i.pinimg.com/originals/3c/4f/5c/3c4f5cdf510f6e0ef1a724b6345a8441.jpg'),
+    (uuid(), 'Have a Cocktail Night','https://www.thematchmaker.ie/wp-content/uploads/2017/07/dating-couple.jpg'),
+    (uuid(), 'Dress up and go for a Fancy Night Out','http://blog.kidzcentralstation.com/wp-content/uploads/Date-Night.jpg'),
+    (uuid(), 'Plan a Vacation','https://images.pond5.com/young-couple-planning-vacation-trip-footage-074078931_prevstill.jpeg'),
+    (uuid(), 'Go Swimming','https://s3.envato.com/files/201474541/preview.jpg'),
+    (uuid(), 'Attend an Art Show','http://www.artsantafe.com/wp-content/uploads/2017/07/img_5306.jpg'),
+    (uuid(), 'Go to a Bookstore or Library','https://i.pinimg.com/originals/b6/bd/f5/b6bdf5a138152dbef30b9a8e21e2eed8.jpg'),
+    (uuid(), 'Go to the Zoo','https://media-cdn.tripadvisor.com/media/photo-s/0a/ef/ab/5c/couple-at-al-ain-zoo.jpg'),
+    (uuid(), 'Go to the Aquarium','https://www.orlandodatenightguide.com/wp-content/uploads/2018/05/florida-aquarium-couple-2.jpg'),
+    (uuid(), 'Scuba Diving', 'https://maltadiving.com/wp-content/uploads/2018/06/OW-4-600x400.jpg' );
 
+INSERT INTO foods
+    (uniqueurl, meal_name, meal_img)
+VALUES
+    (uuid(), 'Hamburger','https://kazzit.com/custom/domain_1/image_files/2766_photo_230038.jpg'),
+    (uuid(), 'Turkey Burger','http://www.mdrhealthycooking.com/wp-content/uploads/2013/12/TomsTurkeyBurger.jpg'),
+    (uuid(), 'Chicken Sandwich','https://www.traderjoes.com/TJ_CMS_Content/Images/Recipe/chicken-slaw-bagel.jpg'),
+    (uuid(), 'Chicken Strips','https://static.olocdn.net/menu/applebees/e6e6841c2a799e33bf393d25ac267209.jpg'),
+    (uuid(), 'Hot Dog','https://www.hot-dog.org/sites/default/files/pictures/MLB/MLB-slide.png'),
+    (uuid(), 'Taco','https://www.chelseasmessyapron.com/wp-content/uploads/2018/12/Healthy-Tacos-6.jpg'),
+    (uuid(), 'Burrito','https://mexicanfoodjournal.com/wp-content/uploads/2017/10/Chorizo-Egg-Breafast-Burrito.jpg'),
+    (uuid(), 'Beef Empanada','https://s3.amazonaws.com/images.wewalka.us/chilean_beef_empanadas_alt-web.jpg'),
+    (uuid(), 'Chile Relleno','https://houseofyumm.com/wp-content/uploads/2017/12/chile-rellenos-4-683x1024.jpg'),
+    (uuid(), 'Chips and Salsa','https://www.austinchronicle.com/binary/128f/food_feature15.jpg'),
+    (uuid(), 'Chicken Tikka Masala','https://cafedelites.com/wp-content/uploads/2018/04/Best-Chicken-Tikka-Masala-IMAGE-2.jpg'),
+    (uuid(), 'Samosas','https://www.africanbites.com/wp-content/uploads/2018/10/IMG_9223.jpg'),
+    (uuid(), 'Butter Chicken','https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-64.jpg'),
+    (uuid(), 'Chickpea Curry','https://yupitsvegan.com/wp-content/uploads/2017/11/coconut-chickpea-curry-vegan-square-12.jpg'),
+    (uuid(), 'Keema Aloo','https://www.tashasartisanfoods.com/blog/wp-content/uploads/2018/07/Keema-Aloo-Curry-2.jpg'),
+    (uuid(), 'Chicken Shawarma','https://www.recipetineats.com/wp-content/uploads/2014/12/Chicken-Shawarma_5.jpg'),
+    (uuid(), 'Greek Chicken Souvlaki','https://media.chefdehome.com/740/0/0/chicken-souvlaki/souvlaki-chicken.jpg'),
+    (uuid(), 'Greek Roasted Potatoes','https://www.recipetineats.com/wp-content/uploads/2018/09/Greek-Lemon-Potatoes_1.jpg'),
+    (uuid(), 'Greek Salad','https://www.jessicagavin.com/wp-content/uploads/2018/02/greek-salad-2-1200.jpg'),
+    (uuid(), 'Humus','https://static01.nyt.com/images/2015/10/07/dining/07HUMMUS/07HUMMUS-articleLarge-v2.jpg'),
+    (uuid(), 'Jerk Chicken','https://www.africanbites.com/wp-content/uploads/2013/03/IMG_6264.jpg'),
+    (uuid(), 'Ackee and Saltfish','http://iamajamaican.net/wp-content/uploads/2015/07/jbeesgarden-gimme-dat-gud-ole.jpg'),
+    (uuid(), 'Red Pea Soup','https://healthiersteps.com/wp-content/uploads/2018/12/rbest-ed-peas-soup.jpg'),
+    (uuid(), 'Brown Stew Chicken','http://africanbites.com/wp-content/uploads/2015/08/IMG_6711.jpg'),
+    (uuid(), 'Cornmeal Porridge','https://www.africanbites.com/wp-content/uploads/2017/01/IMG_6396.jpg'),
+    (uuid(), 'Shrimp Etouffee','https://www.africanbites.com/wp-content/uploads/2017/06/IMG_5690-2-1.jpg'),
+    (uuid(), 'Jambalaya','https://cafedelites.com/wp-content/uploads/2018/05/Jambalaya-IMAGE-3.jpg'),
+    (uuid(), 'Gumbo','https://spicysouthernkitchen.com/wp-content/uploads/seafood-gumbo-12.jpg'),
+    (uuid(), 'Shrimp and Grits','https://www.africanbites.com/wp-content/uploads/2016/12/IMG_2002.jpg'),
+    (uuid(), 'Blackened Catfish','http://jackieourman.com/wp-content/uploads/2014/05/blackened-catfish-810x540.jpg'),
+    (uuid(), 'Tortellini Soup','https://s23209.pcdn.co/wp-content/uploads/2019/01/Creamy-Tortellini-SoupIMG_8162.jpg'),
+    (uuid(), 'Baked Ziti with Sausage','https://www.onceuponachef.com/images/2017/10/Sausage-Baked-Ziti-1.jpg'),
+    (uuid(), 'Gnocchi with Tomato Sauce and Mozzarella','https://images.media-allrecipes.com/userphotos/560x315/5439074.jpg'),
+    (uuid(), 'Baked Eggplant with Parmesan','https://www.jerseygirlcooks.com/wp-content/uploads/2016/05/Eggplant-Parmesan-1.jpg'),
+    (uuid(), 'Beefy Baked Ravioli','https://i.ytimg.com/vi/y0s4QOwVuTE/maxresdefault.jpg'),
+    (uuid(), 'Funnel Cake','https://www.cookingmamas.com/wp-content/uploads/2013/05/Funnel-Cakes-6.jpg'),
+    (uuid(), 'Beignets','https://spicysouthernkitchen.com/wp-content/uploads/beignets.jpg'),
+    (uuid(), 'Taco Bell','https://sm.mashable.com/t/mashable_sea/photo/default/taco-bell_rx11.910.png'),
+    (uuid(), 'Homemade pizza','https://nadialim.com/wp-content/uploads/2016/10/Pizza-Supreme_02-555x555.jpg'),
+    (uuid(), 'Hot wings','https://www.dinneratthezoo.com/wp-content/uploads/2016/08/baked-buffalo-wings-11.jpg'),
+    (uuid(), 'Lasagna','https://www.thewholesomedish.com/wp-content/uploads/2018/07/Best-Lasagna-550.jpg'),
+    (uuid(), 'One of your favorite childhood meals','https://www.alisonspantry.com/uploads/new-products/1258.jpg');
+    
 
-INSERT INTO foods (meal_name) VALUES('Hamburger');
-INSERT INTO foods (meal_name) VALUES('Turkey Burger');
-INSERT INTO foods (meal_name) VALUES('Chicken Sandwich');
-INSERT INTO foods (meal_name) VALUES('Chicken Strips');
-INSERT INTO foods (meal_name) VALUES('Hot Dog');
-INSERT INTO foods (meal_name) VALUES('Taco');
-INSERT INTO foods (meal_name) VALUES('Burrito');
-INSERT INTO foods (meal_name) VALUES('Beef Empanada');
-INSERT INTO foods (meal_name) VALUES('Chile Relleno');
-INSERT INTO foods (meal_name) VALUES('Chips and Salsa');
-INSERT INTO foods (meal_name) VALUES('Chicken Tikka Masala');
-INSERT INTO foods (meal_name) VALUES('Samosas');
-INSERT INTO foods (meal_name) VALUES('Butter Chicken');
-INSERT INTO foods (meal_name) VALUES('Chickpea Curry');
-INSERT INTO foods (meal_name) VALUES('Keema Aloo');
-INSERT INTO foods (meal_name) VALUES('Chicken Shawarma');
-INSERT INTO foods (meal_name) VALUES('Greek Chicken Souvlaki');
-INSERT INTO foods (meal_name) VALUES('Greek Roasted Potatoes');
-INSERT INTO foods (meal_name) VALUES('Greek Salad');
-INSERT INTO foods (meal_name) VALUES('Humus');
-INSERT INTO foods (meal_name) VALUES('Jerk Chicken');
-INSERT INTO foods (meal_name) VALUES('Ackee and Saltfish');
-INSERT INTO foods (meal_name) VALUES('Red Pea Soup');
-INSERT INTO foods (meal_name) VALUES('Brown Stew Chicken');
-INSERT INTO foods (meal_name) VALUES('Cornmeal Porridge');
-INSERT INTO foods (meal_name) VALUES('Shrimp Etouffee');
-INSERT INTO foods (meal_name) VALUES('Jambalaya');
-INSERT INTO foods (meal_name) VALUES('Gumbo');
-INSERT INTO foods (meal_name) VALUES('Shrimp and Grits');
-INSERT INTO foods (meal_name) VALUES('Blackened Catfish');
-INSERT INTO foods (meal_name) VALUES('Tortellini Soup');
-INSERT INTO foods (meal_name) VALUES('Baked Ziti with Sausage');
-INSERT INTO foods (meal_name) VALUES('Gnocchi with Tomato Sauce and Mozzarella');
-INSERT INTO foods (meal_name) VALUES('Baked Eggplant with Parmesan');
-INSERT INTO foods (meal_name) VALUES('Beefy Baked Ravioli');
-INSERT INTO foods (meal_name) VALUES('Funnel Cake');
-INSERT INTO foods (meal_name) VALUES('Beignets');
-INSERT INTO foods (meal_name) VALUES('Taco Bell');
-INSERT INTO foods (meal_name) VALUES('Homemade pizza');
-INSERT INTO foods (meal_name) VALUES('Hot wings');
-INSERT INTO foods (meal_name) VALUES('Lasagna');
-INSERT INTO foods (meal_name) VALUES('One of your favorite childhood meals');
-
+INSERT INTO users
+    (uniqueurl, acct_name, couple_name, secret_word, userone_name, usertwo_name)
+VALUES
+    (uuid(), 'test_couple', 'test couple', 'password', 'Jane', 'John'); 
 
 
 

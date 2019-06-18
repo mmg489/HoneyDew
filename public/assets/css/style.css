@@ -6,16 +6,25 @@ This CSS resource incorporates links to font software which is the valuable copy
     font-family: "Honey Dew";
     src: url("../Fonts/HoneyDew.eot") format("eot"), url("../Fonts/HoneyDew.woff") format("woff"), url("../Fonts/HoneyDew.woff2") format("woff2"), url("../Fonts/HoneyDew.ttf") format("ttf");
 }
-
+.swiper-container{
+    margin: auto;
+    margin-top: 62px;
+    
+}
 body {
     font-family: "Honey Dew", serif;
     background-image: url("../images/engagement-1718244_1920.jpeg");
+    background-position: right top;
     background-repeat: no-repeat;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
+.modal-content{
+    padding-bottom: 0px  !important;
+    padding-top:0px !important;
+}
   main {
     flex: 1 0 auto;
   }
@@ -25,32 +34,56 @@ p {
     color: black;
     margin: 10px;
 }
-
+h5{
+    color:rgb(3, 180, 193) !important;
+}
 a {
     font-family: "Honey Dew", serif;
 }
 
-h5 {
+h4 {
     color: #F2BF27 !important;
 }
 
-.statement, .or {
+.statement {
+    font-size: 25px;
+    color: black;
+    margin-top:-80px;
+}
+.or{
     font-size: 25px;
     color: black;
 }
-
 footer.yellow.lighten-3 {
     padding: 10px 0;
-    background-color: rgb(134, 246, 160) !important;
+    background-color: rgb(208,233,129) !important;
     color: #F2BF27 !important;
 }
-
-nav {
-    background-color: rgb(134, 246, 160);
+nav{
+    background-color: rgb(208,233,129) !important;
+    position: absolute;
 }
 
-.btn, .btn-large {
+nav li ul {
+    z-index: 100%;
+    position: absolute;
+}
+::placeholder{
+    color:rgb(21, 121, 21);
+    font-size: 25px !important;
+}
+.img_slide{
+    margin-left:29%;
+    margin-top: 7%;
+
+}
+
+.btn, .btn-large, .btn-flat{
     background-color: #F2BF27 !important;
+    color:white;
+    font-family: "Honey Dew";
+    font-weight: bolder;
+    font-size: 20px !important;
 }
 
 .brand-logo {
@@ -64,14 +97,57 @@ nav {
 }
 
 #sign-up {
+    font-size: 28px;
+    font-weight: bolder;
+    background-color: rgb(208,233,129);
+    
+}
+#newuser{
+    font-family:  "Honey Dew" !important;
     font-size: x-large;
     font-weight: bolder;
-    background-color: paleturquoise;
+    margin: 36px 0 8px 0 !important;
+    color:#F2BF27;
+}
+#user{
+    font-family:  "Honey Dew" !important;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 36px 0 8px 0 !important;
+    color:#F2BF27;
+}
+.modal {
+    font-family:  "Honey Dew" !important;
+     font-size: x-large;
+     font-weight: bolder;
+     background-color: rgb(208,233,129)!important;
+     font-family:  "Honey Dew" !important;
+ }
+.modal-footer{
+   font-family:  "Honey Dew" !important;
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgb(208,233,129)!important;
+    font-family:  "Honey Dew" !important;
+}
+.input-field > label {
+    color:rgb(3, 180, 193) !important;
+    font-size: 28px;
+    
+}
+
+#newUserBtn{
+    font-family: "Honey Dew";
+    font-size: 25px !important;
+    font-weight: bolder;
+    color:white !important;
 }
 
 .dropdown-trigger {
     margin-right: 30px;
     margin-top: 5px;
+ 
+ 
 }
 
 #card {
@@ -99,15 +175,33 @@ nav ul a {
 }
 
 .dashboard-cont {
-    width:100%;
-    margin-left: 0px;
+    width:90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    margin-bottom: 60px;
 }
 
 .idea {
     text-align: center;
-    margin-top: 30%;
-    color: #ffc400;
-    font-size: 5em;
+    margin-top: 50px;
+    color: #F2BF27 !important;
+    font-size: 4em;
     -webkit-text-stroke: 1px #242424;
     text-shadow: 0px 0px 14px rgb(133, 143, 0);
+}
+
+.av-img {
+    max-height: 200px;
+}
+
+.row .col.l1 {
+    width:15%;
+}
+
+.container{
+    margin-top: 50px;
+}
+.footer{
+    margin-top:0px;
 }

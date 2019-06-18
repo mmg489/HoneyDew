@@ -1,14 +1,37 @@
-<main class="swipe-page col s12 m6">
+<main> 
+    <nav>
+    <div class="nav-wrapper">
+
+        <ul class="right">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown4"><i
+                        class="large material-icons">insert_menu</i></a></li>
+
+            <!-- Dropdown Structure -->
+            <ul id="dropdown4" class="dropdown-content swipe-nav">
+                <li class="divider"></li>
+                <li><a href="/">Sign Out</a></li>
+            </ul>
+        </ul>
+    </div>
+</nav>
+
+    <div class="swipe-page col s12 m6">
 
     <div class="swiper-container">
-        <p class="swipe-header center">Date Ideas:</p>
+        <h3 class="swiper-header center">Date Ideas:</h3>
         <div class="swiper-wrapper">
-            {{#each activites_data}}
+            {{#each activities_data}}
             <div class="swiper-slide unliked" value={{this.id}}>
-                <h4 class="idea">{{event_name}}</h4>
+                <div class="row">
+                <img src="{{event_img}}" alt="" class="img_slide" width="200px" height="200px">
+                </div>
+                <div class="row">
+                <h6 class="idea center-align">{{event_name}}</h6>
+                </div>
             </div>
             {{/each}}
         </div>
     </div>
-    
+    </div>
 </main>
