@@ -9,9 +9,7 @@
 
             <!-- Dropdown Structure -->
             <ul id="dropdown4" class="dropdown-content">
-                    {{#each user_data}}
-                <li><a href="/dashboard/{{this.uniqueurl}}">Home</a></li>
-                {{/each}}
+          
                 <li class="divider"></li>
                 <li><a href="/">Sign Out</a></li>
             </ul>
@@ -27,7 +25,7 @@
             {{#each foods_data}}
             <div class="swiper-slide unliked" value={{this.id}}>
                  <img src="{{meal_img}}" alt="" class="img_slide" width="200px" height="200px">
-                  <h4 class="idea">{{meal_name}}</h4>
+                  <h4 class="idea">{{liked_foods}}</h4>
                
             </div>
             {{/each}}

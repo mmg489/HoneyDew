@@ -131,6 +131,20 @@ var orm = {
             cb(result);
             console.log(result);
         });
+    },
+    both: function (table, col, uniqueurl, cb) {
+        var queryString = 'SELECT * from (SELECT *, COUNT(*) c FROM ';
+        queryString += table + ' GROUP BY ' + col;
+        queryString += ' HAVING c > 1) x WHERE uniqueurl = "';
+        queryString += uniqueurl + '"';
+
+        connection.query(queryString, function (err, result) {
+            console.log(queryString);
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        })
     }
 };
 

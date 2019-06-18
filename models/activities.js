@@ -24,6 +24,11 @@ var activities = {
     orm.delete('activities', condition, function(res) {
         cb(res);
     });
+  },
+  both: function (col, uniqueurl, cb) {
+    orm.both('user_likes', col, uniqueurl, function (res) {
+      cb(res);
+    });
   }
 };
 
