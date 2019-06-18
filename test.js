@@ -28,20 +28,20 @@ describe('/GET foods', function() {
 
 
 //testing updates of liked countsfor foods
-describe('/PUT/:uniqueurl/:id foods', function() {
-    it('it should UPDATE a food like given the id', function(done) {
-        let food = {id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
-        foods.all(food.id, food.uniqueurl, function(err, res) {
-            chai.request(server)
-            .put('/api/foods/like/' + food.uniqueurl + food.id)
-            .send({id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
-            .end(function(err, res) {
-                res.should.have.status(200);
-            done();
-            });
-        });
-    });
-});
+// describe('/PUT/:uniqueurl/:id foods', function() {
+//     it('it should UPDATE a food like given the id', function(done) {
+//         let food = {id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
+//         foods.all(food.id, food.uniqueurl, function(err, res) {
+//             chai.request(server)
+//             .put('/api/foods/like/' + food.uniqueurl + food.id)
+//             .send({id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
+//             .end(function(err, res) {
+//                 res.should.have.status(200);
+//             done();
+//             });
+//         });
+//     });
+// });
 
 // // testing for undoing likes on foods
 // describe('/PUT/:id foods', () => {cd
@@ -193,7 +193,31 @@ describe('/GET users', function() {
 
 // Displays usersname with the avatars
 describe('/GET users', function() {
-    it('it should GET ', function(done) {
+    it('it should GET the users names and diplay them with an avatar', function(done) {
+        chai.request(server)
+            .get('/dashboard/:uniqueurl/:username')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+// tests if the images of foods that were both liked shown
+describe('/GET users', function() {
+    it('it should GET the images that were both liked by the users for foods', function(done) {
+        chai.request(server)
+            .get('/dashboard/:uniqueurl/:username')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+// testing to see if the images of activites that were both liked are shown
+describe('/GET users', function() {
+    it('it should GET the images that were both liked by the users for activities', function(done) {
         chai.request(server)
             .get('/dashboard/:uniqueurl/:username')
             .end(function (err, res) {
