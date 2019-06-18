@@ -139,7 +139,6 @@ router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     });
 });
 
-// shows the images of foods that were both liked 
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
@@ -147,7 +146,6 @@ router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     })
 });
 
-// shows the images of activites that were both liked 
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {
