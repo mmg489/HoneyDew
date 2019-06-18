@@ -10,10 +10,25 @@ var activities = require('./models/activities.js');
 var users = require('./models/users.js');
 
 
+//testing route to homepage
+chai.use(chaiHttp);
+describe('/GET index', function() {
+    it('it should GET index page', function(done) {
+        chai.request(server)
+            .get('/')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+
+
+
 //FOOD
 
 //testing on pulling all foods
-chai.use(chaiHttp);
 describe('/GET foods', function() {
     it('it should GET all the foods', function(done) {
         chai.request(server)
@@ -28,13 +43,13 @@ describe('/GET foods', function() {
 
 
 //testing updates of liked counts for foods
-describe('/PUT/:uniqueurl/:meal_name foods', function() {
+describe('/PUT/:uniqueurl/:mealname foods', function() {
     it('it should UPDATE a food like given the id', function(done) {
-        let food = {id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
-        foods.both(food.meal_name, food.uniqueurl, function(err, res) {
+        let user = {id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", meal_name: "Ramen"}
+        users.insert('user_likes', 'uniqueurl, liked_foods', '"' + user.uniqueurl + '", "'  + user.meal_name +'"', function(err, res) {
             chai.request(server)
-            .put('/api/foods/like/:uniqueurl/:meal_name' + food.uniqueurl + food.id)
-            .send({id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
+            .put('/api/foods/like/' + user.uniqueurl + '/' + user.meal_name)
+            .send({id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", meal_name: "Ramen"})
             .end(function(err, res) {
                 res.should.have.status(200);
             done();
@@ -44,20 +59,20 @@ describe('/PUT/:uniqueurl/:meal_name foods', function() {
 });
 
 // // testing for undoing likes on foods
-// describe('/PUT/:id foods', () => {cd
-//     it('it should UPDATE a food unlike given the id', (done) => {
-//         let food = {id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
-//         foods.update(food.id, (err, res) => {
-//             chai.request(server)
-//             .put('/api/foods/undo/' + food.id)
-//             .send({id: 500, meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
-//             .end((err, res) => {
-//                 res.should.have.status(200);
-//             done();
-//             });
-//         });
-//     });
-// });
+describe('/PUT/:uniqueurl/:mealname foods', function() {
+    it('it should UPDATE a food unliked given the mealname', function(done) {
+        let user = {id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", meal_name: "Ramen"}
+        users.insert('user_likes', 'uniqueurl, liked_foods', '"' + user.uniqueurl + '", "'  + user.meal_name +'"', function(err, res) {
+            chai.request(server)
+            .put('/api/foods/like/' + user.uniqueurl + '/' + 'undo' + '/' + user.meal_name)
+            .send({id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", meal_name: "Ramen"})
+            .end(function(err, res) {
+                res.should.have.status(200);
+            done();
+            });
+        });
+    });
+});
 
 // // shows liked idea from both users
 describe('/GET foods', function() {
@@ -87,36 +102,37 @@ describe('/GET activities', function() {
 });
 
 // //testing updates of liked counts for activities
-// describe('/PUT/:id activities', () => {
-//     it('it should UPDATE an activity like given the id', (done) => {
-//         let food = {id: 650, event_name: "Home Improvement", event_img: "https://www.lincolnsdacu.org/wp-content/uploads/2018/08/q-and-a-july-13.jpg", swipe: 2}
-//         foods.update(food.id, (err, res) => {
-//             chai.request(server)
-//             .put('/api/activities/liked/:uniqueurl/' + food.id + users.uniqueurl)
-//             .send({id: 650, event_name: "Home Improvement", event_img: "https://www.lincolnsdacu.org/wp-content/uploads/2018/08/q-and-a-july-13.jpg", swipe: 2})
-//             .end((err, res) => {
-//                 res.should.have.status(200);
-//             done();
-//             });
-//         });
-//     });
-// });
+describe('/PUT/:uniqueurl/:eventname activities', function() {
+    it('it should UPDATE a food like given the eventname', function(done) {
+        let user = {id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", event_name: "Vampire Hunting"}
+        users.insert('user_likes', 'uniqueurl, liked_activities', '"' + user.uniqueurl + '", "'  + user.event_name +'"', function(err, res) {
+            chai.request(server)
+            .put('/api/activities/like/' + user.uniqueurl + '/' + user.event_name)
+            .send({id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", event_name: "Vampire Hunting"})
+            .end(function(err, res) {
+                res.should.have.status(200);
+            done();
+            });
+        });
+    });
+});
+
 
 // //testing updates for undoing like on activity
-// describe('/PUT/:id activities', () => {
-//     it('it should UPDATE an activity unlike given the id', (done) => {
-//         let food = {id: 650, event_name: "Home Improvement", event_img: "https://www.lincolnsdacu.org/wp-content/uploads/2018/08/q-and-a-july-13.jpg", swipe: 2}
-//         foods.update(food.id, (err, res) => {
-//             chai.request(server)
-//             .put('/api/activities/undo/' + food.id + users.uniqueurl)
-//             .send({id: 650, event_name: "Home Improvement", event_img: "https://www.lincolnsdacu.org/wp-content/uploads/2018/08/q-and-a-july-13.jpg", swipe: 2})
-//             .end((err, res) => {
-//                 res.should.have.status(200);
-//             done();
-//             });
-//         });
-//     });
-// });
+describe('/PUT/:uniqueurl/:eventname foods', function() {
+    it('it should UPDATE a food unliked given the eventname', function(done) {
+        let user = {id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", event_name: "Vampire Hunting"}
+        users.insert('user_likes', 'uniqueurl, liked_activities', '"' + user.uniqueurl + '", "'  + user.event_name +'"', function(err, res) {
+            chai.request(server)
+            .put('/api/activities/like/' + user.uniqueurl + '/' + 'undo' + '/' + user.event_name)
+            .send({id: 500, uniqueurl: "a4b2217d-9163-11e9-bcbb-0200cecd583e", event_name: "Vampire Hunting"})
+            .end(function(err, res) {
+                res.should.have.status(200);
+            done();
+            });
+        });
+    });
+});
 
 // //show liked from both users
 describe('/GET activities', function() {
