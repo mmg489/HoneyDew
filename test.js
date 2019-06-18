@@ -27,13 +27,13 @@ describe('/GET foods', function() {
 
 
 
-//testing updates of liked countsfor foods
-describe('/PUT/:uniqueurl/:id foods', function() {
+//testing updates of liked counts for foods
+describe('/PUT/:uniqueurl/:meal_name foods', function() {
     it('it should UPDATE a food like given the id', function(done) {
         let food = {id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2}
-        foods.all(food.id, food.uniqueurl, function(err, res) {
+        foods.both(food.meal_name, food.uniqueurl, function(err, res) {
             chai.request(server)
-            .put('/api/foods/like/' + food.uniqueurl + food.id)
+            .put('/api/foods/like/:uniqueurl/:meal_name' + food.uniqueurl + food.id)
             .send({id: 500, uniqueurl: " ", meal_name: "Ramen", meal_img: "http://blog.williams-sonoma.com/wp-content/uploads/2017/07/july-19-Pork-Belly-Ramen-652x978.jpg", swipe: 2})
             .end(function(err, res) {
                 res.should.have.status(200);
@@ -60,16 +60,16 @@ describe('/PUT/:uniqueurl/:id foods', function() {
 // });
 
 // // shows liked idea from both users
-// describe('/GET foods', function() {
-//     it('it should GET all foods liked from both users', function(done) {
-//         chai.request(server)
-//             .get('/api/foods/both:uniqueurl')
-//             .end(function (err, res) {
-//                 res.should.have.status(200);
-//                 done();
-//             });
-//     });
-// });
+describe('/GET foods', function() {
+    it('it should GET all foods liked from both users', function(done) {
+        chai.request(server)
+            .get('/api/foods/both/:uniqueurl')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
 
 
 // //ACTIVITIES
@@ -119,16 +119,16 @@ describe('/GET activities', function() {
 // });
 
 // //show liked from both users
-// describe('/GET activities', function() {
-//     it('it should GET all liked activities from both users', function(done) {
-//         chai.request(server)
-//             .get('/api/foods/both:uniqueurl')
-//             .end(function (err, res) {
-//                 res.should.have.status(200);
-//                 done();
-//             });
-//     });
-// });
+describe('/GET activities', function() {
+    it('it should GET all liked activities from both users', function(done) {
+        chai.request(server)
+            .get('/api/activities/both/:uniqueurl')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
 
 
 
@@ -193,7 +193,31 @@ describe('/GET users', function() {
 
 // Displays usersname with the avatars
 describe('/GET users', function() {
-    it('it should GET ', function(done) {
+    it('it should GET the users names and diplay them with an avatar', function(done) {
+        chai.request(server)
+            .get('/dashboard/:uniqueurl/:username')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+// tests if the images of foods that were both liked shown
+describe('/GET users', function() {
+    it('it should GET the images that were both liked by the users for foods', function(done) {
+        chai.request(server)
+            .get('/dashboard/:uniqueurl/:username')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+// testing to see if the images of activites that were both liked are shown
+describe('/GET users', function() {
+    it('it should GET the images that were both liked by the users for activities', function(done) {
         chai.request(server)
             .get('/dashboard/:uniqueurl/:username')
             .end(function (err, res) {
