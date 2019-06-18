@@ -35,7 +35,7 @@ router.put('/api/foods/like/:uniqueurl/:mealname', function (req, res) {
 // undo 'liked'
 router.put('/api/foods/like/:uniqueurl/undo/:mealname', function (req, res) {
     var uniqueurl = req.params.uniqueurl;
-    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_foods = ' + req.params.mealname + ' LIMIT 1', function (result) {
+    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_foods = "' + req.params.mealname + '" LIMIT 1', function (result) {
         console.log(result);
         res.sendStatus(200);
     });
@@ -61,34 +61,29 @@ router.get('/api/activities/like/:uniqueurl', function (req, res) {
     });
 });
 
-// adding new activity ideas
-// router.post('/api/activities/add', function (req, res) {
-//     activities.create('');
-// });
-
 // Updates the 'like' count for activity ideas
-router.put('/api/activities/like/:uniqueurl/:id', function (req, res) {
+router.put('/api/activities/like/:uniqueurl/:eventname', function (req, res) {
     var uniqueurl = req.params.uniqueurl;
-    users.insert('user_likes', 'uniqueurl, liked_activities', '"' + uniqueurl + '", ' + req.params.id, function (result) {
+    users.insert('user_likes', 'uniqueurl, liked_activities', '"' + uniqueurl + '", "' + req.params.eventname + '"', function (result) {
         // console.log(result);
         res.sendStatus(200);
     });
 });
 
 // undo 'liked'
-router.put('/api/activities/like/:uniqueurl/undo/:id', function (req, res) {
+router.put('/api/activities/like/:uniqueurl/undo/:eventname', function (req, res) {
     var uniqueurl = req.params.uniqueurl;
-    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_activities = ' + req.params.id + ' LIMIT 1', function (result) {
+    users.undo('user_likes', 'uniqueurl = ' + '"' + uniqueurl + '" AND liked_activities = "' + req.params.eventname + '" LIMIT 1', function (result) {
         console.log(result);
         res.sendStatus(200);
     });
 });
 
 // show 'liked ideas from both users
-router.get('/api/foods/both/:uniqueurl', function (req, res) {
-    activities.both(req.params.uniqueurl, function (data) {
+router.get('/api/activities/both/:uniqueurl', function (req, res) {
+    foods.both('liked_activities', req.params.uniqueurl, function (data) {
+        res.render('both_activities', { activities_data: data });
         console.log(data);
-        res.render('both-activities', { activites_data: data });
     });
 });
 
@@ -127,6 +122,7 @@ router.post('/auth', function (req, res) {
     }
 });
 
+// Allows users to pick who is using
 router.get('/dashboard/:uniqueurl/', function (req, res) {
     users.data(req.params.uniqueurl, function (data) {
         console.log('data: ' + data);
@@ -134,6 +130,7 @@ router.get('/dashboard/:uniqueurl/', function (req, res) {
     });
 });
 
+// Displays users username on dashboard with avatar
 router.get('/dashboard/:uniqueurl/:username', function (req, res) {
     // var username = req.params.username;
     users.data(req.params.uniqueurl, function (data) {

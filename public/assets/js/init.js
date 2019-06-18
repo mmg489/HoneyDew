@@ -17,14 +17,14 @@ $(document).ready(function () {
 
         if ($(this).hasClass('liked')) {
 
-            var food_id = $(this).attr('value');
+            var mealname = $(this).last().text().trim();
             var path = window.location.href;
 
             $.ajax({
                 method: "PUT",
-                url: path + '/undo/' + food_id
+                url: path + '/undo/' + mealname
             }).then(function (data) {
-                console.log(food_id + ' unliked');
+                console.log(mealname + ' unliked');
             })
 
             $(this).toggleClass('liked unliked');
