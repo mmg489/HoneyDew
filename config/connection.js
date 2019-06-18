@@ -4,7 +4,10 @@ require('dotenv').config();
 
 var connection;
 
- if (process.env.AWS_HOST) {
+if (process.env.JAWSDB_URL) {
+    // Database is JawsDB on Heroku
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else if (process.env.AWS_HOST) {
     connection = mysql.createConnection({
         host: process.env.AWS_HOST,
         port: 3306,
